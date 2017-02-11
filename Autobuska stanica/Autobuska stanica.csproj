@@ -138,6 +138,9 @@
     <EmbeddedResource Include="BusStation.resx">
       <DependentUpon>BusStation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CarrierEntry.resx">
+      <DependentUpon>CarrierEntry.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
