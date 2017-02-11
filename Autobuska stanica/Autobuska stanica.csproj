@@ -90,6 +90,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CarrierDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarrierDelete.Designer.cs">
+      <DependentUpon>CarrierDelete.cs</DependentUpon>
+    </Compile>
     <Compile Include="CarrierEntry.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,9 @@
     </Compile>
     <EmbeddedResource Include="BusStation.resx">
       <DependentUpon>BusStation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarrierDelete.resx">
+      <DependentUpon>CarrierDelete.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CarrierEntry.resx">
       <DependentUpon>CarrierEntry.cs</DependentUpon>

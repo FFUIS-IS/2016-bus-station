@@ -41,6 +41,7 @@
             this.informationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pricelistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,7 +86,8 @@
             // 
             this.carrierToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.unosToolStripMenuItem1,
-            this.pregledToolStripMenuItem1});
+            this.pregledToolStripMenuItem1,
+            this.deleteToolStripMenuItem1});
             this.carrierToolStripMenuItem.Name = "carrierToolStripMenuItem";
             this.carrierToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.carrierToolStripMenuItem.Text = "Carrier";
@@ -141,6 +143,13 @@
             this.pricelistToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.pricelistToolStripMenuItem.Text = "Price_list";
             // 
+            // deleteToolStripMenuItem1
+            // 
+            this.deleteToolStripMenuItem1.Name = "deleteToolStripMenuItem1";
+            this.deleteToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.deleteToolStripMenuItem1.Text = "Delete";
+            this.deleteToolStripMenuItem1.Click += new System.EventHandler(this.deleteToolStripMenuItem1_Click);
+            // 
             // Bus_station
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -174,6 +183,7 @@
         private System.Windows.Forms.ToolStripMenuItem dataEntryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem informationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem1;
     }
 }
 

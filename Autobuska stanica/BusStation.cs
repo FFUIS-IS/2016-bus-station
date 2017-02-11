@@ -78,5 +78,12 @@ namespace Autobuska_stanica
                 d3.Show();
 
         }
+
+        private void deleteToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form d4 = new CarrierDelete();
+            d4.Show();
+
+        }
     }
 }
