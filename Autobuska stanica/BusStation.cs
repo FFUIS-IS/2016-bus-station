@@ -71,5 +71,12 @@ namespace Autobuska_stanica
             d2.Show();
 
         }
+
+        private void pregledToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form d3 = new CarrierInformation();
+                d3.Show();
+
+        }
     }
 }

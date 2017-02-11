@@ -182,3 +182,4 @@ D:\Autobuska stanica\2016-bus-station\Autobuska stanica\obj\Debug\Autobuska_stan
 D:\Autobuska stanica\2016-bus-station\Autobuska stanica\obj\Debug\Autobuska_stanica.WorkersInformation.resources
 D:\Autobuska stanica\2016-bus-station\Autobuska stanica\obj\Debug\Autobuska stanica.csproj.GenerateResource.Cache
 D:\Autobuska stanica\2016-bus-station\Autobuska stanica\obj\Debug\Autobuska_stanica.CarrierEntry.resources
+D:\Autobuska stanica\2016-bus-station\Autobuska stanica\obj\Debug\Autobuska_stanica.CarrierInformation.resources

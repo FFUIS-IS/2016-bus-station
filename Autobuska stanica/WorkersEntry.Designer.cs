@@ -116,6 +116,7 @@
             this.Controls.Add(this.label1);
             this.Name = "WorkersEntry";
             this.Text = "WorkersEntry";
+            this.Load += new System.EventHandler(this.WorkersEntry_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

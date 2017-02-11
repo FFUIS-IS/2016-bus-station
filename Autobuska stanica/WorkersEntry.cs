@@ -82,5 +82,10 @@ namespace Autobuska_stanica
         {
             
         }
+
+        private void WorkersEntry_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

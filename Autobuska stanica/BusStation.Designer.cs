@@ -39,8 +39,8 @@
             this.workersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataEntryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pricelistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pricelistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,15 +93,16 @@
             // unosToolStripMenuItem1
             // 
             this.unosToolStripMenuItem1.Name = "unosToolStripMenuItem1";
-            this.unosToolStripMenuItem1.Size = new System.Drawing.Size(128, 22);
+            this.unosToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.unosToolStripMenuItem1.Text = "Data entry";
             this.unosToolStripMenuItem1.Click += new System.EventHandler(this.unosToolStripMenuItem1_Click);
             // 
             // pregledToolStripMenuItem1
             // 
             this.pregledToolStripMenuItem1.Name = "pregledToolStripMenuItem1";
-            this.pregledToolStripMenuItem1.Size = new System.Drawing.Size(128, 22);
-            this.pregledToolStripMenuItem1.Text = "Pregled";
+            this.pregledToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.pregledToolStripMenuItem1.Text = "Information";
+            this.pregledToolStripMenuItem1.Click += new System.EventHandler(this.pregledToolStripMenuItem1_Click);
             // 
             // workersToolStripMenuItem
             // 
@@ -127,18 +128,18 @@
             this.informationToolStripMenuItem.Text = "Information";
             this.informationToolStripMenuItem.Click += new System.EventHandler(this.informationToolStripMenuItem_Click);
             // 
-            // pricelistToolStripMenuItem
-            // 
-            this.pricelistToolStripMenuItem.Name = "pricelistToolStripMenuItem";
-            this.pricelistToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.pricelistToolStripMenuItem.Text = "Price_list";
-            // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
             this.deleteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            // 
+            // pricelistToolStripMenuItem
+            // 
+            this.pricelistToolStripMenuItem.Name = "pricelistToolStripMenuItem";
+            this.pricelistToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.pricelistToolStripMenuItem.Text = "Price_list";
             // 
             // Bus_station
             // 

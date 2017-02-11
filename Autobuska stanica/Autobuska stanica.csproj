@@ -102,6 +102,12 @@
     <Compile Include="BusStation.Designer.cs">
       <DependentUpon>BusStation.cs</DependentUpon>
     </Compile>
+    <Compile Include="CarrierInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarrierInformation.Designer.cs">
+      <DependentUpon>CarrierInformation.cs</DependentUpon>
+    </Compile>
     <Compile Include="DatabaseConnection.cs" />
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
@@ -140,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CarrierEntry.resx">
       <DependentUpon>CarrierEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarrierInformation.resx">
+      <DependentUpon>CarrierInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
