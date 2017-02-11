@@ -128,6 +128,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "LinesEnetery";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "LinesEntery";
             this.Load += new System.EventHandler(this.LinesEnetery_Load);
             this.ResumeLayout(false);
