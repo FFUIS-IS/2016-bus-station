@@ -65,6 +65,31 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Prijedor",
+            "Doboj",
+            "Derventa",
+            "Gradiska",
+            "Teslic",
+            "Brcko",
+            "Bijeljina",
+            "Zvornik",
+            "Milici",
+            "Vlasenica",
+            "Bratunac",
+            "Srebrenica",
+            "Han Pijesak",
+            "Sokolac",
+            "Istocno Sarajevo",
+            "Rogatica",
+            "Visegrad",
+            "Foca",
+            "Cajnice",
+            "Bileca",
+            "Gacko",
+            "Trebinje",
+            "Ljubinje",
+            "Nevesinje"});
             this.comboBox2.Location = new System.Drawing.Point(101, 82);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(160, 21);
