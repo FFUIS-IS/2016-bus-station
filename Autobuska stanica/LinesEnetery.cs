@@ -22,17 +22,34 @@ namespace Autobuska_stanica
         {
             SqlCeConnection Connection = DbConnection.Instance.Connection;
 
-            SqlCeCommand command = new SqlCeCommand("INSERT INTO Lines ([From_the_city],[To_the_city]) VALUES ('" + comboBox1.Text + "', '" + comboBox2.Text + "'); ", Connection);
+            SqlCeCommand command = new SqlCeCommand("INSERT INTO Lines ([from_the_city],[to_the_city]) VALUES ('" + comboBox1.Text + "', '" + comboBox2.Text + "'); ", Connection);
 
             SqlCeDataReader dataReader = command.ExecuteReader();
 
-            while(dataReader.Read())
+            while (dataReader.Read())
             {
                 comboBox1.Items.Add(dataReader.GetString(0));
 
             }
+        }
 
+
+        private void button1_Click(object sender, EventArgs e)
+        {
             
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void WorkersEntry_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
+
+
+       

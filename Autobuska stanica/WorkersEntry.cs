@@ -39,8 +39,8 @@ namespace Autobuska_stanica
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
-         
-          
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -49,7 +49,7 @@ namespace Autobuska_stanica
             SqlCeConnection Connection = DbConnection.Instance.Connection;
 
             SqlCeCommand command = new SqlCeCommand("INSERT INTO Workers ([First_name],[Last_name]) VALUES ('" + textBox1.Text + "', '" + textBox2.Text + "'); ", Connection);
-            
+
             try
             {
                 command.ExecuteNonQuery();
@@ -57,7 +57,7 @@ namespace Autobuska_stanica
 
             catch (Exception ee)
             {
-               
+
 
                 MessageBox.Show("Unos nije uspio! \r Greska: " + ee.Message);
                 return;
@@ -68,19 +68,21 @@ namespace Autobuska_stanica
             if (textBox1.Text == "")
             { MessageBox.Show("Niste unijeli ime!"); }
 
-          else  if (textBox2.Text == "")
+            else if (textBox2.Text == "")
             { MessageBox.Show("Niste unijeli prezime!"); }
 
-           else { MessageBox.Show("Unos je uspio!");
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox1.Focus();
+            else
+            {
+                MessageBox.Show("Unos je uspio!");
+                textBox1.Clear();
+                textBox2.Clear();
+                textBox1.Focus();
             }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void WorkersEntry_Load(object sender, EventArgs e)
@@ -89,3 +91,5 @@ namespace Autobuska_stanica
         }
     }
 }
+
+

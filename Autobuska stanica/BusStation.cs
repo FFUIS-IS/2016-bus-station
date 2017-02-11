@@ -87,5 +87,16 @@ namespace Autobuska_stanica
             d4.Show();
 
         }
+
+        private void pricelistToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addCitiesInLineToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form d5 = new Add_city();
+            d5.Show();
+        }
     }
 }
