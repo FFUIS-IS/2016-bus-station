@@ -44,9 +44,11 @@ namespace Autobuska_stanica
         private void unosToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Form c = new CarrierEntry();
+
             c.Show();
 
         }
+           
 
         private void dataEntryToolStripMenuItem_Click(object sender, EventArgs e)
         {
