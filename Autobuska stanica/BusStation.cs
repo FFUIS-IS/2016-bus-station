@@ -120,5 +120,10 @@ namespace Autobuska_stanica
             Form d6 = new ToTheCity();
             d6.Show();
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

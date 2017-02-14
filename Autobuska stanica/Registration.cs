@@ -34,7 +34,7 @@ namespace Autobuska_stanica
             }
             SqlCeConnection Connection = DbConnection.Instance.Connection;
 
-            SqlCeCommand command = new SqlCeCommand("INSERT INTO Login ([Username],[Password]) VALUES ('" + textBox1.Text + "', '" + textBox2.Text + "'); ", Connection);
+            SqlCeCommand command = new SqlCeCommand("INSERT INTO Registration ([Username],[Password]) VALUES ('" + textBox1.Text + "', '" + textBox2.Text + "'); ", Connection);
 
             try
             {

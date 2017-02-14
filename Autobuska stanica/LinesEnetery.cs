@@ -49,7 +49,10 @@ namespace Autobuska_stanica
         private void button1_Click(object sender, EventArgs e)
         {
             SqlCeConnection Connection = DbConnection.Instance.Connection;
+
+
             SqlCeCommand command = Connection.CreateCommand();
+            SqlCeCommand command1 = Connection.CreateCommand();
 
             command.CommandText = "SELECT ID FROM from_the_city WHERE name = '" + comboBox1.Text + "';";
 
@@ -57,8 +60,7 @@ namespace Autobuska_stanica
             rdr.Read();
             int d = rdr.GetInt32(0);
 
-
-            SqlCeCommand command1 = Connection.CreateCommand();
+            
 
             command.CommandText = "SELECT ID FROM to_the_city WHERE name = '" + comboBox2.Text + "';";
 
@@ -82,7 +84,7 @@ namespace Autobuska_stanica
             }
 
 
-            /*if (comboBox1.Text == "")
+            if (comboBox1.Text == "")
             { MessageBox.Show("Niste unijeli ime!"); }
 
             else if (comboBox1.Text == "")
@@ -93,7 +95,7 @@ namespace Autobuska_stanica
                 MessageBox.Show("Unos je uspio!");
                 
                 comboBox1.Focus();
-            }*/
+            }
 
         }
 
