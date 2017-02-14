@@ -98,5 +98,21 @@ namespace Autobuska_stanica
             Form d5 = new Add_city();
             d5.Show();
         }
+
+        private void ticketsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void issuingTicketsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fromTheCityToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form d5 = new FromTheCity();
+            d5.Show();
+        }
     }
 }

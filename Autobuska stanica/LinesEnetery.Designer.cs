@@ -57,41 +57,15 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Pale"});
             this.comboBox1.Location = new System.Drawing.Point(101, 26);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(160, 21);
             this.comboBox1.TabIndex = 2;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Prijedor",
-            "Doboj",
-            "Derventa",
-            "Gradiska",
-            "Teslic",
-            "Brcko",
-            "Bijeljina",
-            "Zvornik",
-            "Milici",
-            "Vlasenica",
-            "Bratunac",
-            "Srebrenica",
-            "Han Pijesak",
-            "Sokolac",
-            "Istocno Sarajevo",
-            "Rogatica",
-            "Visegrad",
-            "Foca",
-            "Cajnice",
-            "Bileca",
-            "Gacko",
-            "Trebinje",
-            "Ljubinje",
-            "Nevesinje"});
             this.comboBox2.Location = new System.Drawing.Point(101, 82);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(160, 21);

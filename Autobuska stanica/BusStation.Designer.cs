@@ -51,6 +51,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.cityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fromTheCityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toTheCityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,7 +63,8 @@
             this.linessOfTransportToolStripMenuItem,
             this.carrierToolStripMenuItem,
             this.workersToolStripMenuItem,
-            this.ticketsToolStripMenuItem});
+            this.ticketsToolStripMenuItem,
+            this.cityToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(669, 24);
@@ -162,12 +166,14 @@
             this.ticketsToolStripMenuItem.Name = "ticketsToolStripMenuItem";
             this.ticketsToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.ticketsToolStripMenuItem.Text = "Tickets";
+            this.ticketsToolStripMenuItem.Click += new System.EventHandler(this.ticketsToolStripMenuItem_Click);
             // 
             // issuingTicketsToolStripMenuItem
             // 
             this.issuingTicketsToolStripMenuItem.Name = "issuingTicketsToolStripMenuItem";
             this.issuingTicketsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.issuingTicketsToolStripMenuItem.Text = "Issuing tickets";
+            this.issuingTicketsToolStripMenuItem.Click += new System.EventHandler(this.issuingTicketsToolStripMenuItem_Click);
             // 
             // addCitiesInLineToolStripMenuItem
             // 
@@ -239,6 +245,28 @@
             this.label8.TabIndex = 8;
             this.label8.Text = "Autobuska stanica Pale";
             // 
+            // cityToolStripMenuItem
+            // 
+            this.cityToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fromTheCityToolStripMenuItem,
+            this.toTheCityToolStripMenuItem});
+            this.cityToolStripMenuItem.Name = "cityToolStripMenuItem";
+            this.cityToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
+            this.cityToolStripMenuItem.Text = "City";
+            // 
+            // fromTheCityToolStripMenuItem
+            // 
+            this.fromTheCityToolStripMenuItem.Name = "fromTheCityToolStripMenuItem";
+            this.fromTheCityToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.fromTheCityToolStripMenuItem.Text = "From the city";
+            this.fromTheCityToolStripMenuItem.Click += new System.EventHandler(this.fromTheCityToolStripMenuItem_Click);
+            // 
+            // toTheCityToolStripMenuItem
+            // 
+            this.toTheCityToolStripMenuItem.Name = "toTheCityToolStripMenuItem";
+            this.toTheCityToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.toTheCityToolStripMenuItem.Text = "To the city";
+            // 
             // Bus_station
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -289,6 +317,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ToolStripMenuItem cityToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fromTheCityToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toTheCityToolStripMenuItem;
     }
 }
 

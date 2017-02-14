@@ -127,6 +127,12 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="FromTheCity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FromTheCity.Designer.cs">
+      <DependentUpon>FromTheCity.cs</DependentUpon>
+    </Compile>
     <Compile Include="LinesEnetery.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +152,12 @@
     </Compile>
     <Compile Include="Registration.Designer.cs">
       <DependentUpon>Registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tickets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tickets.Designer.cs">
+      <DependentUpon>Tickets.cs</DependentUpon>
     </Compile>
     <Compile Include="WorkersDelete.cs">
       <SubType>Form</SubType>
@@ -183,6 +195,9 @@
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FromTheCity.resx">
+      <DependentUpon>FromTheCity.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LinesEnetery.resx">
       <DependentUpon>LinesEnetery.cs</DependentUpon>
     </EmbeddedResource>
@@ -200,6 +215,9 @@
     </Compile>
     <EmbeddedResource Include="Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tickets.resx">
+      <DependentUpon>Tickets.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WorkersDelete.resx">
       <DependentUpon>WorkersDelete.cs</DependentUpon>

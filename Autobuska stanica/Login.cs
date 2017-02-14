@@ -39,7 +39,7 @@ namespace Autobuska_stanica
             }
 
             SqlCeCommand command = Connection.CreateCommand();
-          //  command.CommandText = ("SELECT * FROM Login WHERE username = '" + usernameTextBox.Text + "' AND password = '" + passwordTextBox.Text + "' ; )" , Connection ) ;
+           //command.CommandText = ("SELECT * FROM Login WHERE username = '" + usernameTextBox.Text + "' AND password = '" + passwordTextBox.Text + "' ; )" , Connection ) ;
 
             
 

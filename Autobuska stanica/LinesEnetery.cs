@@ -21,22 +21,80 @@ namespace Autobuska_stanica
         private void LinesEnetery_Load(object sender, EventArgs e)
         {
             SqlCeConnection Connection = DbConnection.Instance.Connection;
+            SqlCeCommand command = Connection.CreateCommand();
+            SqlCeCommand command1 = Connection.CreateCommand();
 
-            SqlCeCommand command = new SqlCeCommand("INSERT INTO Lines ([from_the_city],[to_the_city]) VALUES ('" + comboBox1.Text + "', '" + comboBox2.Text + "'); ", Connection);
+            command.CommandText = "SELECT * FROM from_the_city";
+            command1.CommandText = "SELECT * FROM to_the_city";
 
-            SqlCeDataReader dataReader = command.ExecuteReader();
+            SqlCeDataReader rdr = command.ExecuteReader();
+            SqlCeDataReader rdr1 = command1.ExecuteReader();
 
-            while (dataReader.Read())
+            while(rdr.Read())
             {
-                comboBox1.Items.Add(dataReader.GetString(0));
+                comboBox1.Items.Add(rdr.GetString(1));
 
             }
+            while (rdr1.Read())
+            {
+                comboBox2.Items.Add(rdr.GetString(1));
+
+            }
+
+
+
         }
 
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            SqlCeConnection Connection = DbConnection.Instance.Connection;
+            SqlCeCommand command = Connection.CreateCommand();
+
+            command.CommandText = "SELECT ID FROM from_the_city WHERE name = '" + comboBox1.Text + "';";
+
+            SqlCeDataReader rdr = command.ExecuteReader();
+            rdr.Read();
+            int d = rdr.GetInt32(0);
+
+
+            SqlCeCommand command1 = Connection.CreateCommand();
+
+            command.CommandText = "SELECT ID FROM to_the_city WHERE name = '" + comboBox2.Text + "';";
+
+            SqlCeDataReader rdr1 = command.ExecuteReader();
+            rdr.Read();
+            int f = rdr.GetInt32(0);
+
+            command.CommandText = "ISERT INTO lines (from_city_id,to_the_city) VALUES " + d + ","+f+");";
+
+            try
+            {
+                command.ExecuteNonQuery();
+            }
+
+            catch (Exception ee)
+            {
+
+
+                MessageBox.Show("Unos nije uspio! \r Greska: " + ee.Message);
+                return;
+            }
+
+
+            /*if (comboBox1.Text == "")
+            { MessageBox.Show("Niste unijeli ime!"); }
+
+            else if (comboBox1.Text == "")
+            { MessageBox.Show("Niste unijeli prezime!"); }
+
+            else
+            {
+                MessageBox.Show("Unos je uspio!");
+                
+                comboBox1.Focus();
+            }*/
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -45,6 +103,11 @@ namespace Autobuska_stanica
         }
 
         private void WorkersEntry_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
