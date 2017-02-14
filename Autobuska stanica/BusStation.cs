@@ -93,11 +93,7 @@ namespace Autobuska_stanica
 
         }
 
-        private void addCitiesInLineToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form d5 = new Add_city();
-            d5.Show();
-        }
+      
 
         private void ticketsToolStripMenuItem_Click(object sender, EventArgs e)
         {

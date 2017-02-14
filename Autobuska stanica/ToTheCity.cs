@@ -22,7 +22,7 @@ namespace Autobuska_stanica
         {
             SqlCeConnection Connection = DbConnection.Instance.Connection;
 
-            SqlCeCommand command = new SqlCeCommand("INSERT INTO to_the_city ([Name]) VALUES ('" + textBox1.Text + "'); ", Connection);
+            SqlCeCommand command = new SqlCeCommand("INSERT INTO to_the_city ([name]) VALUES ('" + textBox1.Text + "'); ", Connection);
 
             try
             {
@@ -54,6 +54,11 @@ namespace Autobuska_stanica
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ToTheCity_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

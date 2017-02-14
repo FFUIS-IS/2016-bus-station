@@ -90,12 +90,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Add city.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Add city.Designer.cs">
-      <DependentUpon>Add city.cs</DependentUpon>
-    </Compile>
     <Compile Include="CarrierDelete.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,9 +177,6 @@
     <Compile Include="WorkersInformation.Designer.cs">
       <DependentUpon>WorkersInformation.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Add city.resx">
-      <DependentUpon>Add city.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="BusStation.resx">
       <DependentUpon>BusStation.cs</DependentUpon>
     </EmbeddedResource>

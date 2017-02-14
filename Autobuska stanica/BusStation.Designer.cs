@@ -30,20 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Bus_station));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.linessOfTransportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pregledToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.unosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.carrierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.unosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.pregledToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.cityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fromTheCityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toTheCityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.workersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataEntryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.linessOfTransportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pregledToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ticketsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.issuingTicketsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addCitiesInLineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.carrierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.unosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pregledToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,9 +52,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.cityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fromTheCityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toTheCityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.unosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,6 +71,60 @@
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
+            // cityToolStripMenuItem
+            // 
+            this.cityToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fromTheCityToolStripMenuItem,
+            this.toTheCityToolStripMenuItem});
+            this.cityToolStripMenuItem.Name = "cityToolStripMenuItem";
+            this.cityToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
+            this.cityToolStripMenuItem.Text = "City";
+            // 
+            // fromTheCityToolStripMenuItem
+            // 
+            this.fromTheCityToolStripMenuItem.Name = "fromTheCityToolStripMenuItem";
+            this.fromTheCityToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.fromTheCityToolStripMenuItem.Text = "From the city";
+            this.fromTheCityToolStripMenuItem.Click += new System.EventHandler(this.fromTheCityToolStripMenuItem_Click);
+            // 
+            // toTheCityToolStripMenuItem
+            // 
+            this.toTheCityToolStripMenuItem.Name = "toTheCityToolStripMenuItem";
+            this.toTheCityToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.toTheCityToolStripMenuItem.Text = "To the city";
+            this.toTheCityToolStripMenuItem.Click += new System.EventHandler(this.toTheCityToolStripMenuItem_Click);
+            // 
+            // workersToolStripMenuItem
+            // 
+            this.workersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dataEntryToolStripMenuItem,
+            this.informationToolStripMenuItem,
+            this.deleteToolStripMenuItem});
+            this.workersToolStripMenuItem.Name = "workersToolStripMenuItem";
+            this.workersToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.workersToolStripMenuItem.Text = "Workers";
+            // 
+            // dataEntryToolStripMenuItem
+            // 
+            this.dataEntryToolStripMenuItem.Name = "dataEntryToolStripMenuItem";
+            this.dataEntryToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.dataEntryToolStripMenuItem.Text = "Data entry";
+            this.dataEntryToolStripMenuItem.Click += new System.EventHandler(this.dataEntryToolStripMenuItem_Click);
+            // 
+            // informationToolStripMenuItem
+            // 
+            this.informationToolStripMenuItem.Name = "informationToolStripMenuItem";
+            this.informationToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.informationToolStripMenuItem.Text = "Information";
+            this.informationToolStripMenuItem.Click += new System.EventHandler(this.informationToolStripMenuItem_Click);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            // 
             // linessOfTransportToolStripMenuItem
             // 
             this.linessOfTransportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -88,14 +141,21 @@
             this.pregledToolStripMenuItem.Text = "Information";
             this.pregledToolStripMenuItem.Click += new System.EventHandler(this.pregledToolStripMenuItem_Click);
             // 
-            // unosToolStripMenuItem
+            // ticketsToolStripMenuItem
             // 
-            this.unosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addCitiesInLineToolStripMenuItem});
-            this.unosToolStripMenuItem.Name = "unosToolStripMenuItem";
-            this.unosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.unosToolStripMenuItem.Text = "Data entry";
-            this.unosToolStripMenuItem.Click += new System.EventHandler(this.unosToolStripMenuItem_Click);
+            this.ticketsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.issuingTicketsToolStripMenuItem});
+            this.ticketsToolStripMenuItem.Name = "ticketsToolStripMenuItem";
+            this.ticketsToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.ticketsToolStripMenuItem.Text = "Tickets";
+            this.ticketsToolStripMenuItem.Click += new System.EventHandler(this.ticketsToolStripMenuItem_Click);
+            // 
+            // issuingTicketsToolStripMenuItem
+            // 
+            this.issuingTicketsToolStripMenuItem.Name = "issuingTicketsToolStripMenuItem";
+            this.issuingTicketsToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.issuingTicketsToolStripMenuItem.Text = "Issuing tickets";
+            this.issuingTicketsToolStripMenuItem.Click += new System.EventHandler(this.issuingTicketsToolStripMenuItem_Click);
             // 
             // carrierToolStripMenuItem
             // 
@@ -110,77 +170,23 @@
             // unosToolStripMenuItem1
             // 
             this.unosToolStripMenuItem1.Name = "unosToolStripMenuItem1";
-            this.unosToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.unosToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
             this.unosToolStripMenuItem1.Text = "Data entry";
             this.unosToolStripMenuItem1.Click += new System.EventHandler(this.unosToolStripMenuItem1_Click);
             // 
             // pregledToolStripMenuItem1
             // 
             this.pregledToolStripMenuItem1.Name = "pregledToolStripMenuItem1";
-            this.pregledToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.pregledToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
             this.pregledToolStripMenuItem1.Text = "Information";
             this.pregledToolStripMenuItem1.Click += new System.EventHandler(this.pregledToolStripMenuItem1_Click);
-            // 
-            // workersToolStripMenuItem
-            // 
-            this.workersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dataEntryToolStripMenuItem,
-            this.informationToolStripMenuItem,
-            this.deleteToolStripMenuItem});
-            this.workersToolStripMenuItem.Name = "workersToolStripMenuItem";
-            this.workersToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
-            this.workersToolStripMenuItem.Text = "Workers";
-            // 
-            // dataEntryToolStripMenuItem
-            // 
-            this.dataEntryToolStripMenuItem.Name = "dataEntryToolStripMenuItem";
-            this.dataEntryToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.dataEntryToolStripMenuItem.Text = "Data entry";
-            this.dataEntryToolStripMenuItem.Click += new System.EventHandler(this.dataEntryToolStripMenuItem_Click);
-            // 
-            // informationToolStripMenuItem
-            // 
-            this.informationToolStripMenuItem.Name = "informationToolStripMenuItem";
-            this.informationToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.informationToolStripMenuItem.Text = "Information";
-            this.informationToolStripMenuItem.Click += new System.EventHandler(this.informationToolStripMenuItem_Click);
-            // 
-            // deleteToolStripMenuItem
-            // 
-            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.deleteToolStripMenuItem.Text = "Delete";
-            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem1
             // 
             this.deleteToolStripMenuItem1.Name = "deleteToolStripMenuItem1";
-            this.deleteToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.deleteToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
             this.deleteToolStripMenuItem1.Text = "Delete";
             this.deleteToolStripMenuItem1.Click += new System.EventHandler(this.deleteToolStripMenuItem1_Click);
-            // 
-            // ticketsToolStripMenuItem
-            // 
-            this.ticketsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.issuingTicketsToolStripMenuItem});
-            this.ticketsToolStripMenuItem.Name = "ticketsToolStripMenuItem";
-            this.ticketsToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
-            this.ticketsToolStripMenuItem.Text = "Tickets";
-            this.ticketsToolStripMenuItem.Click += new System.EventHandler(this.ticketsToolStripMenuItem_Click);
-            // 
-            // issuingTicketsToolStripMenuItem
-            // 
-            this.issuingTicketsToolStripMenuItem.Name = "issuingTicketsToolStripMenuItem";
-            this.issuingTicketsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.issuingTicketsToolStripMenuItem.Text = "Issuing tickets";
-            this.issuingTicketsToolStripMenuItem.Click += new System.EventHandler(this.issuingTicketsToolStripMenuItem_Click);
-            // 
-            // addCitiesInLineToolStripMenuItem
-            // 
-            this.addCitiesInLineToolStripMenuItem.Name = "addCitiesInLineToolStripMenuItem";
-            this.addCitiesInLineToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.addCitiesInLineToolStripMenuItem.Text = "Add cities in line";
-            this.addCitiesInLineToolStripMenuItem.Click += new System.EventHandler(this.addCitiesInLineToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -253,28 +259,12 @@
             this.label8.TabIndex = 8;
             this.label8.Text = "Autobuska stanica Pale";
             // 
-            // cityToolStripMenuItem
+            // unosToolStripMenuItem
             // 
-            this.cityToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fromTheCityToolStripMenuItem,
-            this.toTheCityToolStripMenuItem});
-            this.cityToolStripMenuItem.Name = "cityToolStripMenuItem";
-            this.cityToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
-            this.cityToolStripMenuItem.Text = "City";
-            // 
-            // fromTheCityToolStripMenuItem
-            // 
-            this.fromTheCityToolStripMenuItem.Name = "fromTheCityToolStripMenuItem";
-            this.fromTheCityToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.fromTheCityToolStripMenuItem.Text = "From the city";
-            this.fromTheCityToolStripMenuItem.Click += new System.EventHandler(this.fromTheCityToolStripMenuItem_Click);
-            // 
-            // toTheCityToolStripMenuItem
-            // 
-            this.toTheCityToolStripMenuItem.Name = "toTheCityToolStripMenuItem";
-            this.toTheCityToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.toTheCityToolStripMenuItem.Text = "To the city";
-            this.toTheCityToolStripMenuItem.Click += new System.EventHandler(this.toTheCityToolStripMenuItem_Click);
+            this.unosToolStripMenuItem.Name = "unosToolStripMenuItem";
+            this.unosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.unosToolStripMenuItem.Text = "Data entry";
+            this.unosToolStripMenuItem.Click += new System.EventHandler(this.unosToolStripMenuItem_Click);
             // 
             // Bus_station
             // 
@@ -307,7 +297,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem linessOfTransportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pregledToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem unosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem carrierToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem unosToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem pregledToolStripMenuItem1;
@@ -316,7 +305,6 @@
         private System.Windows.Forms.ToolStripMenuItem informationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem addCitiesInLineToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ticketsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem issuingTicketsToolStripMenuItem;
         private System.Windows.Forms.Label label1;
@@ -329,6 +317,7 @@
         private System.Windows.Forms.ToolStripMenuItem cityToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fromTheCityToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toTheCityToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem unosToolStripMenuItem;
     }
 }
 

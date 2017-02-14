@@ -93,6 +93,7 @@
             this.Controls.Add(this.button1);
             this.Name = "FromTheCity";
             this.Text = "FromTheCity";
+            this.Load += new System.EventHandler(this.FromTheCity_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

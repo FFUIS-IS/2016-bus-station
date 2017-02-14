@@ -37,7 +37,7 @@ namespace Autobuska_stanica
             }
             while (rdr1.Read())
             {
-                comboBox2.Items.Add(rdr.GetString(1));
+                comboBox2.Items.Add(rdr1.GetString(1));
 
             }
 
@@ -53,6 +53,7 @@ namespace Autobuska_stanica
 
             SqlCeCommand command = Connection.CreateCommand();
             SqlCeCommand command1 = Connection.CreateCommand();
+            
 
             command.CommandText = "SELECT ID FROM from_the_city WHERE name = '" + comboBox1.Text + "';";
 
@@ -62,13 +63,13 @@ namespace Autobuska_stanica
 
             
 
-            command.CommandText = "SELECT ID FROM to_the_city WHERE name = '" + comboBox2.Text + "';";
+            command1.CommandText = "SELECT ID FROM to_the_city WHERE name = '" + comboBox2.Text + "';";
 
             SqlCeDataReader rdr1 = command.ExecuteReader();
-            rdr.Read();
-            int f = rdr.GetInt32(0);
+            rdr1.Read();
+            int f = rdr1.GetInt32(0);
 
-            command.CommandText = "ISERT INTO lines (from_city_id,to_the_city) VALUES " + d + ","+f+");";
+            command.CommandText = "INSERT INTO lines (from_the_city_id,to_the_city_id) VALUES (" + d + ", " + f + " );";
 
             try
             {
@@ -85,10 +86,10 @@ namespace Autobuska_stanica
 
 
             if (comboBox1.Text == "")
-            { MessageBox.Show("Niste unijeli ime!"); }
+            { MessageBox.Show("Niste unijeli grad polaska!"); }
 
             else if (comboBox1.Text == "")
-            { MessageBox.Show("Niste unijeli prezime!"); }
+            { MessageBox.Show("Niste unijeli grad dolaska!"); }
 
             else
             {
@@ -110,6 +111,11 @@ namespace Autobuska_stanica
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

@@ -92,6 +92,7 @@
             this.Controls.Add(this.button1);
             this.Name = "ToTheCity";
             this.Text = "ToTheCity";
+            this.Load += new System.EventHandler(this.ToTheCity_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
