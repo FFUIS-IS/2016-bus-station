@@ -192,6 +192,7 @@
             this.button1.TabIndex = 16;
             this.button1.Text = "SAVE";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -246,6 +247,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Tickets";
             this.Text = "Tickets";
+            this.Load += new System.EventHandler(this.Tickets_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

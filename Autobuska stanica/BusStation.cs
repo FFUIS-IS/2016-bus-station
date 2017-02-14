@@ -102,6 +102,8 @@ namespace Autobuska_stanica
 
         private void issuingTicketsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Form d7 = new Tickets();
+            d7.Show();
 
         }
 
