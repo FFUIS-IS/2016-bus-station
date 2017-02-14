@@ -266,6 +266,7 @@
             this.toTheCityToolStripMenuItem.Name = "toTheCityToolStripMenuItem";
             this.toTheCityToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.toTheCityToolStripMenuItem.Text = "To the city";
+            this.toTheCityToolStripMenuItem.Click += new System.EventHandler(this.toTheCityToolStripMenuItem_Click);
             // 
             // Bus_station
             // 

@@ -114,5 +114,11 @@ namespace Autobuska_stanica
             Form d5 = new FromTheCity();
             d5.Show();
         }
+
+        private void toTheCityToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form d6 = new ToTheCity();
+            d6.Show();
+        }
     }
 }
