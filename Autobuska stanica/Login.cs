@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlServerCe;
+using Autobuska_stanica.Models;
+using Autobuska_stanica.Repos;
 
 namespace Autobuska_stanica
 {
@@ -21,59 +23,51 @@ namespace Autobuska_stanica
         public Login()
         {
             InitializeComponent();
+
         }
+        public bool loginSucces = false;
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (usernameTextBox.Text == "")
+
+            username = usernameTextBox.Text;
+            password = passwordTextBox.Text;
+
+            User user = new User(username, password);
+
+            try
             {
-                MessageBox.Show("Niste unijeli Korisnicko ime !", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                usernameTextBox.Focus();
-                return;
+                UserRepository.Login(user);
+                loginSucces = true;
+                DialogResult = DialogResult.OK;
+                Close();
+
             }
-            else if (passwordTextBox.Text == "")
+
+            catch (Exception exception)
             {
-                MessageBox.Show("Niste unijeli šifru !", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                passwordTextBox.Focus();
-                return;
-            }
 
-            SqlCeCommand command = Connection.CreateCommand();
-           command.CommandText = ("SELECT * FROM Login WHERE username = '" + usernameTextBox.Text + "' AND password = '" + passwordTextBox.Text + "' ; )" ) ;
-
-            
-
-            SqlCeDataReader rdr = command.ExecuteReader();
-
-
-
-            while (rdr.Read())
-            {
-                if (usernameTextBox.Text == rdr[0].ToString() && passwordTextBox.Text == rdr[1].ToString().Trim())
+                if (usernameTextBox.Text.Length == 0)
                 {
-                    username = rdr[0].ToString();
-                    password = rdr[1].ToString();
+                    MessageBox.Show(exception.Message);
+                    usernameTextBox.Text = "";
+                    usernameTextBox.Focus();
                 }
+                else if (passwordTextBox.Text.Length == 0)
+                {
+                    MessageBox.Show(exception.Message);
+                    passwordTextBox.Text = "";
+                    passwordTextBox.Focus();
+                }
+                else if (loginSucces != true)
+                {
+                    MessageBox.Show(exception.Message);
+                    usernameTextBox.Text = "";
+                    passwordTextBox.Text = "";
+                    usernameTextBox.Focus();
+                }
+
             }
-
-            if (usernameTextBox.Text == username && passwordTextBox.Text == password.Trim())
-            {
-
-                Bus_station p = new Bus_station();
-                p.Show();
-                this.Hide();
-
-            }
-
-            else
-            {
-                MessageBox.Show("Pogrešeno uneseno korisnicko ime ili šifra \n \n Pokušajte ponovo", "Prijava greške", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                usernameTextBox.Clear();
-                passwordTextBox.Clear();
-                usernameTextBox.Focus();
-            }
-
-            Connection.Close();
 
         }
 
