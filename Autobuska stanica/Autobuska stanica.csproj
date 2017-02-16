@@ -173,6 +173,18 @@
     <Compile Include="ToTheCity.Designer.cs">
       <DependentUpon>ToTheCity.cs</DependentUpon>
     </Compile>
+    <Compile Include="ToTheCityDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToTheCityDelete.Designer.cs">
+      <DependentUpon>ToTheCityDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToTheCityInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToTheCityInformation.Designer.cs">
+      <DependentUpon>ToTheCityInformation.cs</DependentUpon>
+    </Compile>
     <Compile Include="WorkersDelete.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,6 +250,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ToTheCity.resx">
       <DependentUpon>ToTheCity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToTheCityDelete.resx">
+      <DependentUpon>ToTheCityDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToTheCityInformation.resx">
+      <DependentUpon>ToTheCityInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WorkersDelete.resx">
       <DependentUpon>WorkersDelete.cs</DependentUpon>

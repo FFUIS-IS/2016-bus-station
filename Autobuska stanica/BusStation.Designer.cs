@@ -295,12 +295,14 @@
             this.deleteToolStripMenuItem3.Name = "deleteToolStripMenuItem3";
             this.deleteToolStripMenuItem3.Size = new System.Drawing.Size(152, 22);
             this.deleteToolStripMenuItem3.Text = "Delete";
+            this.deleteToolStripMenuItem3.Click += new System.EventHandler(this.deleteToolStripMenuItem3_Click);
             // 
             // informationToolStripMenuItem2
             // 
             this.informationToolStripMenuItem2.Name = "informationToolStripMenuItem2";
             this.informationToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
             this.informationToolStripMenuItem2.Text = "Information";
+            this.informationToolStripMenuItem2.Click += new System.EventHandler(this.informationToolStripMenuItem2_Click);
             // 
             // Bus_station
             // 

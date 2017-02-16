@@ -8,11 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlServerCe;
+
 namespace Autobuska_stanica
 {
-    public partial class FromTheCityDelete : Form
+    public partial class ToTheCityDelete : Form
     {
-        public FromTheCityDelete()
+        public ToTheCityDelete()
         {
             InitializeComponent();
         }
@@ -22,26 +23,30 @@ namespace Autobuska_stanica
             SqlCeConnection Connection = DbConnection.Instance.Connection;
 
             SqlCeCommand command1 = Connection.CreateCommand();
-            
+         
 
             try
             {
-                command1.CommandText = "SELECT Name FROM from_the_city WHERE Name ='" + textBox1.Text + "' ; ";
+                command1.CommandText = "SELECT name FROM to_the_city WHERE name='" + textBox1.Text + "' ; ";
                 SqlCeDataReader dataReader = command1.ExecuteReader();
                 dataReader.Read();
-              
+               
 
-                MessageBox.Show("Uspjesno ste izbrisali grad polaska!");
+                MessageBox.Show("Uspjesno ste izbrisali grad!");
 
 
             }
             catch (Exception ee)
             {
-                MessageBox.Show("Nepostojeci grad \r Greska:" + ee.Message);
+                MessageBox.Show("Nepostojeci grad\r Greska:" + ee.Message);
                 textBox1.Clear();
                 textBox1.Focus();
 
             }
+
+
         }
     }
 }
+
+        
