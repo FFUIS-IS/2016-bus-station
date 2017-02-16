@@ -127,6 +127,18 @@
     <Compile Include="FromTheCity.Designer.cs">
       <DependentUpon>FromTheCity.cs</DependentUpon>
     </Compile>
+    <Compile Include="FromTheCityDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FromTheCityDelete.Designer.cs">
+      <DependentUpon>FromTheCityDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FromTheCityInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FromTheCityInformation.Designer.cs">
+      <DependentUpon>FromTheCityInformation.cs</DependentUpon>
+    </Compile>
     <Compile Include="LinesEnetery.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +208,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FromTheCity.resx">
       <DependentUpon>FromTheCity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FromTheCityDelete.resx">
+      <DependentUpon>FromTheCityDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FromTheCityInformation.resx">
+      <DependentUpon>FromTheCityInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LinesEnetery.resx">
       <DependentUpon>LinesEnetery.cs</DependentUpon>

@@ -189,3 +189,5 @@ D:\Autobuska stanica\2016-bus-station\Autobuska stanica\obj\Debug\Autobuska_stan
 D:\Autobuska stanica\2016-bus-station\Autobuska stanica\obj\Debug\Autobuska_stanica.Tickets.resources
 D:\Autobuska stanica\2016-bus-station\Autobuska stanica\obj\Debug\Autobuska_stanica.FromTheCity.resources
 D:\Autobuska stanica\2016-bus-station\Autobuska stanica\obj\Debug\Autobuska_stanica.ToTheCity.resources
+D:\Autobuska stanica\2016-bus-station\Autobuska stanica\obj\Debug\Autobuska_stanica.FromTheCityDelete.resources
+D:\Autobuska stanica\2016-bus-station\Autobuska stanica\obj\Debug\Autobuska_stanica.FromTheCityInformation.resources

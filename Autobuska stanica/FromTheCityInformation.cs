@@ -11,9 +11,9 @@ using System.Data.SqlServerCe;
 
 namespace Autobuska_stanica
 {
-    public partial class LinesINFO : Form
+    public partial class FromTheCityInformation : Form
     {
-        public LinesINFO()
+        public FromTheCityInformation()
         {
             InitializeComponent();
         }
@@ -28,7 +28,7 @@ namespace Autobuska_stanica
                 SqlCeConnection Connection = DbConnection.Instance.Connection;
 
                 /*onaj drugi red*/
-                SqlCeCommand command = new SqlCeCommand("SELECT from_the_city_id, to_the_city_id FROM lines  ", Connection);
+                SqlCeCommand command = new SqlCeCommand("SELECT name FROM from_the_city ", Connection);
 
                 SqlCeDataReader dataReader = command.ExecuteReader();
 
@@ -38,7 +38,7 @@ namespace Autobuska_stanica
                 while (dataReader.Read())
                 {
 
-                    listBox1.Items.Add(dataReader.GetString(0) + "  " + dataReader.GetString(1));
+                    listBox1.Items.Add(dataReader.GetString(0));
                 }
                 dataReader.Close();
             }
@@ -50,7 +50,6 @@ namespace Autobuska_stanica
 
 
             }
-
         }
     }
 }
