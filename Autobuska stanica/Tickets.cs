@@ -30,25 +30,31 @@ namespace Autobuska_stanica
 
             SqlCeCommand command = Connection.CreateCommand();
             SqlCeCommand command1 = Connection.CreateCommand();
+            SqlCeCommand command2 = Connection.CreateCommand();
 
 
 
-            command.CommandText = "SELECT ID FROM carrire WHERE name = '" + comboBox1.Text + "';";
-            command1.CommandText= "SELECT ID FROM workers WHERE first_name ='" + comboBox3.Text+ "'; ";
+            command.CommandText = "SELECT ID FROM carrire WHERE name = '" + carrierComboBox.Text + "';";
+            command1.CommandText= "SELECT ID FROM workers WHERE first_name  ='" + workersComboBox.Text+ "'; ";
+            command2.CommandText = "SELECT ID FROM lines WHERE from_the_city_id = '" + linesComboBox.Text + "';";
 
+  
 
             SqlCeDataReader rdr = command.ExecuteReader();
             rdr.Read();
             int d = rdr.GetInt32(0);
 
 
-            SqlCeDataReader rdr1 = command.ExecuteReader();
+            SqlCeDataReader rdr1 = command1.ExecuteReader();
             rdr1.Read();
             int j = rdr1.GetInt32(0);
 
+            SqlCeDataReader rdr2 = command2.ExecuteReader();
+            rdr2.Read();
+            int k = rdr2.GetInt32(0);
 
 
-            command.CommandText = "INSERT INTO tickets (carrier, workers) VALUES (" + d + " , " + j + ");";
+            command.CommandText = "INSERT INTO tickets (carrier, workers, lines) VALUES (" + d + " , " + j + ", " + k + " );";
 
             try
             {
@@ -64,17 +70,17 @@ namespace Autobuska_stanica
             }
 
 
-            if (comboBox1.Text == "")
+            if (carrierComboBox.Text == "")
             { MessageBox.Show("Niste unijeli grad polaska!"); }
 
-            else if (comboBox1.Text == "")
+            else if (carrierComboBox.Text == "")
             { MessageBox.Show("Niste unijeli grad dolaska!"); }
 
             else
             {
                 MessageBox.Show("Unos je uspio!");
 
-                comboBox1.Focus();
+                carrierComboBox.Focus();
             }
 
         }
@@ -86,27 +92,59 @@ namespace Autobuska_stanica
 
             SqlCeCommand command = Connection.CreateCommand();
             SqlCeCommand command1 = Connection.CreateCommand();
+            SqlCeCommand command2 = Connection.CreateCommand();
+
 
 
            
             command.CommandText = "SELECT * FROM carrier";
             command1.CommandText = "SELECT * FROM workers";
+            command2.CommandText = "SELECT * FROM lines";
 
             SqlCeDataReader rdr = command.ExecuteReader();
-            SqlCeDataReader rdr1 = command.ExecuteReader();
+            SqlCeDataReader rdr1 = command1.ExecuteReader();
+            SqlCeDataReader rdr2 = command2.ExecuteReader();
 
+
+          
 
             while (rdr.Read())
             {
-                comboBox1.Items.Add(rdr.GetString(1));
+                carrierComboBox.Items.Add(rdr.GetString(1));
 
             }
             while (rdr1.Read())
             {
-                comboBox3.Items.Add(rdr1.GetString(1));
-
+                workersComboBox.Items.Add(rdr1.GetString(1)+" "+rdr1.GetString(2));
+            
             }
 
+            while(rdr2.Read())
+            {
+                linesComboBox.Items.Add(rdr2.GetString(1)+ "-"+ rdr2.GetString(2));
+            }
+
+                
+
+                }
+
+              
+                 
+        
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
 
         }
     }

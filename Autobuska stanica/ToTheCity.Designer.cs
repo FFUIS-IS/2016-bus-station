@@ -43,7 +43,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "OK";
             this.button1.UseVisualStyleBackColor = true;
-           
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -53,7 +53,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "CANCEL";
             this.button2.UseVisualStyleBackColor = true;
-            
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBox1
             // 
@@ -92,7 +92,6 @@
             this.Controls.Add(this.button1);
             this.Name = "ToTheCity";
             this.Text = "ToTheCity";
-            
             this.ResumeLayout(false);
             this.PerformLayout();
 

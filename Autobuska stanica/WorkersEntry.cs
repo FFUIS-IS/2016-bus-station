@@ -48,7 +48,7 @@ namespace Autobuska_stanica
 
             SqlCeConnection Connection = DbConnection.Instance.Connection;
 
-            SqlCeCommand command = new SqlCeCommand("INSERT INTO Workers ([First_name],[Last_name],[JMBG],[contact],[address],[Username],[Password]) VALUES ('" + textBox1.Text + "', '" + textBox2.Text + "', ' "+jmbgTextBox.Text+"' , '"+contactTextBox.Text +"', '"+ addressTextBox.Text+"','" +  usernameTextBox.Text+"', '"+ passwordTextBox.Text+"' ); ", Connection);
+            SqlCeCommand command = new SqlCeCommand("INSERT INTO Workers ([first_name],[last_name],[jmbg],[contact],[address],[Username],[Password]) VALUES ('" + textBox1.Text + "', '" + textBox2.Text + "', ' "+jmbgTextBox.Text+"' , '"+contactTextBox.Text +"', '"+ addressTextBox.Text+"','" +  usernameTextBox.Text+"', '"+ passwordTextBox.Text+"' ); ", Connection);
 
             try
             {
@@ -73,8 +73,8 @@ namespace Autobuska_stanica
 
             else if (jmbgTextBox.Text == "")
             {
-                MessageBox.Show("Niste unijeli maticni broj!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                MessageBox.Show("Niste unijeli maticni broj!");
+
             }
             else if (contactTextBox.Text == "")
             {

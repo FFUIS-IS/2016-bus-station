@@ -56,14 +56,14 @@ namespace Autobuska_stanica
             
 
             command.CommandText = "SELECT ID FROM from_the_city WHERE name = '" + comboBox1.Text + "';";
+            command1.CommandText = "SELECT ID FROM to_the_city WHERE name = '" + comboBox2.Text + "';";
+
 
             SqlCeDataReader rdr = command.ExecuteReader();
             rdr.Read();
             int d = rdr.GetInt32(0);
 
-            
-
-            command1.CommandText = "SELECT ID FROM to_the_city WHERE name = '" + comboBox2.Text + "';";
+      
 
             SqlCeDataReader rdr1 = command.ExecuteReader();
             rdr1.Read();
