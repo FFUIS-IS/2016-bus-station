@@ -122,6 +122,7 @@
             // carrierComboBox
             // 
             this.carrierComboBox.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.carrierComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.carrierComboBox.FormattingEnabled = true;
             this.carrierComboBox.Location = new System.Drawing.Point(85, 48);
             this.carrierComboBox.Name = "carrierComboBox";
@@ -134,6 +135,8 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(56, 20);
             this.textBox1.TabIndex = 7;
+            this.textBox1.Text = "0";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox4
             // 
@@ -155,12 +158,15 @@
             // 
             // linesComboBox
             // 
+            this.linesComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.linesComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.linesComboBox.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.linesComboBox.FormattingEnabled = true;
             this.linesComboBox.Location = new System.Drawing.Point(85, 81);
             this.linesComboBox.Name = "linesComboBox";
             this.linesComboBox.Size = new System.Drawing.Size(173, 21);
             this.linesComboBox.TabIndex = 12;
+            this.linesComboBox.SelectedIndexChanged += new System.EventHandler(this.linesComboBox_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -231,6 +237,8 @@
             // 
             // workersComboBox
             // 
+            this.workersComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.workersComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.workersComboBox.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.workersComboBox.FormattingEnabled = true;
             this.workersComboBox.Location = new System.Drawing.Point(455, 38);

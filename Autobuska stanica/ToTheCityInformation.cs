@@ -28,7 +28,7 @@ namespace Autobuska_stanica
                 SqlCeConnection Connection = DbConnection.Instance.Connection;
 
                
-                SqlCeCommand command = new SqlCeCommand("SELECT name FROM to_the_city ", Connection);
+                SqlCeCommand command = new SqlCeCommand("SELECT name FROM to_the_city;", Connection);
 
                 SqlCeDataReader dataReader = command.ExecuteReader();
 

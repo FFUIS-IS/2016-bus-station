@@ -27,61 +27,75 @@ namespace Autobuska_stanica
         {
             SqlCeConnection Connection = DbConnection.Instance.Connection;
 
+            Boolean lineAllright = false;
 
-            SqlCeCommand command = Connection.CreateCommand();
-            SqlCeCommand command1 = Connection.CreateCommand();
-            SqlCeCommand command2 = Connection.CreateCommand();
-
-
-
-            command.CommandText = "SELECT ID FROM carrire WHERE name = '" + carrierComboBox.Text + "';";
-            command1.CommandText= "SELECT ID FROM workers WHERE first_name  ='" + workersComboBox.Text+ "'; ";
-            command2.CommandText = "SELECT ID FROM lines WHERE from_the_city_id = '" + linesComboBox.Text + "';";
-
-  
-
-            SqlCeDataReader rdr = command.ExecuteReader();
-            rdr.Read();
-            int d = rdr.GetInt32(0);
-
-
-            SqlCeDataReader rdr1 = command1.ExecuteReader();
-            rdr1.Read();
-            int j = rdr1.GetInt32(0);
-
-            SqlCeDataReader rdr2 = command2.ExecuteReader();
-            rdr2.Read();
-            int k = rdr2.GetInt32(0);
-
-
-            command.CommandText = "INSERT INTO tickets (carrier, workers, lines) VALUES (" + d + " , " + j + ", " + k + " );";
-
-            try
+            for (int i = 0; i < linesComboBox.Items.Count; i++)
+                if (linesComboBox.Text.Equals(linesComboBox.Items[i].ToString()))
+                {
+                    lineAllright = true;
+                    break;
+                }
+                else
+                    lineAllright = false;
+            if (!lineAllright)
             {
-                command.ExecuteNonQuery();
+                MessageBox.Show("Niste unijeli ispravnu rutu!");
+                linesComboBox.Focus();
             }
-
-            catch (Exception ee)
+            else if (carrierComboBox.Text == "")
             {
-
-
-                MessageBox.Show("Unos nije uspio! \r Greska: " + ee.Message);
-                return;
+                MessageBox.Show("Niste unijeli prevoznika!");
             }
-
-
-            if (carrierComboBox.Text == "")
-            { MessageBox.Show("Niste unijeli grad polaska!"); }
 
             else if (carrierComboBox.Text == "")
-            { MessageBox.Show("Niste unijeli grad dolaska!"); }
+            {
+                MessageBox.Show("Niste unijeli grad dolaska!");
+            }
 
             else
             {
-                MessageBox.Show("Unos je uspio!");
+                        SqlCeCommand command = Connection.CreateCommand();
+                        SqlCeCommand command1 = Connection.CreateCommand();
+                        SqlCeCommand command2 = Connection.CreateCommand();
 
-                carrierComboBox.Focus();
-            }
+                        int indexOfLine = Int32.Parse(linesComboBox.SelectedItem.ToString().Substring(0, linesComboBox.SelectedItem.ToString().IndexOf(' ')));
+
+
+
+                        command.CommandText = "SELECT ID FROM carrier WHERE name = '" + carrierComboBox.Text + "';";
+                        command1.CommandText = "SELECT ID FROM workers WHERE first_name  ='" + workersComboBox.Text + "'; ";
+                        //  command2.CommandText = "SELECT ID FROM lines WHERE from_the_city_id = '" + linesComboBox.Text + "';";
+
+
+
+                        SqlCeDataReader rdr = command.ExecuteReader();
+                        rdr.Read();
+                        int d = rdr.GetInt32(0);
+
+
+                        SqlCeDataReader rdr1 = command1.ExecuteReader();
+                        rdr1.Read();
+                        int j = rdr1.GetInt32(0);
+
+                        //SqlCeDataReader rdr2 = command2.ExecuteReader();
+                        //rdr2.Read();
+                        //int k = rdr2.GetInt32(0);
+
+
+                        command.CommandText = "INSERT INTO tickets (carrier, workers_id, lines) VALUES (" + d + " , " + j + ", " + indexOfLine + " );";
+
+                        try
+                        {
+                            command.ExecuteNonQuery();
+                            MessageBox.Show("Unos je uspio!");
+                            carrierComboBox.Focus();
+                        }
+                        catch (Exception ee)
+                        {
+                            MessageBox.Show("Unos nije uspio! \r Greska: " + ee.Message);
+                            return;
+                        }
+                    }
 
         }
 
@@ -118,15 +132,30 @@ namespace Autobuska_stanica
                 workersComboBox.Items.Add(rdr1.GetString(1)+" "+rdr1.GetString(2));
             
             }
-
+            
             while(rdr2.Read())
             {
-                linesComboBox.Items.Add(rdr2.GetString(1)+ "-"+ rdr2.GetString(2));
-            }
-
+                SqlCeDataReader reserveReader;
+                string info;
                 
+                    int from = rdr2.GetInt32(1);
+                    int toCity = rdr2.GetInt32(2);
 
-                }
+                    command.CommandText = "SELECT name FROM from_the_city WHERE id = " + from + ";";
+
+                    reserveReader = command.ExecuteReader();
+                    reserveReader.Read();
+
+                    info = reserveReader.GetString(0);
+                    command.CommandText = "SELECT name FROM to_the_city WHERE id = " + toCity + ";";
+
+                    reserveReader = command.ExecuteReader();
+                    reserveReader.Read();
+
+                    info += " - " + reserveReader.GetString(0);
+                linesComboBox.Items.Add(rdr2.GetInt32(0) +" " + info);
+            }
+        }
 
               
                  
@@ -146,6 +175,44 @@ namespace Autobuska_stanica
         {
             this.Close();
 
+        }
+
+        private void linesComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            function();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            function();
+        }
+        
+        private void function()
+        {
+
+            SqlCeConnection Connection = DbConnection.Instance.Connection;
+            Boolean lineAllright = false;
+
+            for (int i = 0; i < linesComboBox.Items.Count; i++)
+                if (linesComboBox.Text.Equals(linesComboBox.Items[i].ToString()))
+                {
+                    lineAllright = true;
+                    break;
+                }
+                else
+                    lineAllright = false;
+            if (lineAllright)
+            {
+                int index = Int32.Parse(linesComboBox.SelectedItem.ToString().Substring(0, linesComboBox.SelectedItem.ToString().IndexOf(' ')));
+                SqlCeCommand command = new SqlCeCommand("SELECT price FROM lines WHERE id = " + index + ";", Connection);
+                SqlCeDataReader reader = command.ExecuteReader();
+                int broj;
+                if (reader.Read())
+                    if (Int32.TryParse(textBox1.Text, out broj))
+                    {
+                        textBox5.Text = "" + (Int32.Parse(textBox1.Text) * reader.GetInt32(0));
+                    }
+            }
         }
     }
 }
