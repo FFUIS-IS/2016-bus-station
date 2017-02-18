@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlServerCe;
 using Autobuska_stanica;
 
+
 namespace Autobuska_stanica
 {
     public partial class Registration : Form
@@ -23,7 +24,7 @@ namespace Autobuska_stanica
         {
             SqlCeConnection Connection = DbConnection.Instance.Connection;
 
-            SqlCeCommand command = new SqlCeCommand("INSERT INTO registration ([username],[password]) VALUES ('" + textBox1.Text + "', '" + textBox2.Text + "' ); ", Connection);
+            SqlCeCommand command = new SqlCeCommand("INSERT INTO Login ([username],[password]) VALUES ('" + textBox1.Text + "', '" + textBox2.Text + "' ); ", Connection);
 
             if (textBox1.Text == "")
             {
@@ -51,7 +52,7 @@ namespace Autobuska_stanica
               { 
 
                   MessageBox.Show("Registracija nije uspjela. \n Pokušajte ponovo");
-
+                
                   return;
 
               }

@@ -54,7 +54,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(264, 82);
+            this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label1.Location = new System.Drawing.Point(314, 84);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(123, 22);
             this.label1.TabIndex = 0;
@@ -65,6 +66,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.Control;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label2.Location = new System.Drawing.Point(2, 160);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(133, 22);
@@ -75,10 +77,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label3.Location = new System.Drawing.Point(47, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(178, 22);
+            this.label3.Size = new System.Drawing.Size(206, 28);
             this.label3.TabIndex = 2;
             this.label3.Text = "Autobuska stanica PALE";
             // 
@@ -86,6 +89,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label4.Location = new System.Drawing.Point(2, 134);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(153, 22);
@@ -96,7 +100,8 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(7, 186);
+            this.label5.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label5.Location = new System.Drawing.Point(2, 182);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 22);
             this.label5.TabIndex = 4;
@@ -106,6 +111,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label6.Location = new System.Drawing.Point(7, 45);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(72, 22);
@@ -115,6 +121,7 @@
             // 
             // carrierComboBox
             // 
+            this.carrierComboBox.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.carrierComboBox.FormattingEnabled = true;
             this.carrierComboBox.Location = new System.Drawing.Point(85, 48);
             this.carrierComboBox.Name = "carrierComboBox";
@@ -139,6 +146,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label7.Location = new System.Drawing.Point(12, 80);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(58, 22);
@@ -147,6 +155,7 @@
             // 
             // linesComboBox
             // 
+            this.linesComboBox.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.linesComboBox.FormattingEnabled = true;
             this.linesComboBox.Location = new System.Drawing.Point(85, 81);
             this.linesComboBox.Name = "linesComboBox";
@@ -156,10 +165,11 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Lucida Handwriting", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(329, 236);
+            this.label8.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label8.Location = new System.Drawing.Point(361, 252);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(290, 17);
+            this.label8.Size = new System.Drawing.Size(289, 28);
             this.label8.TabIndex = 13;
             this.label8.Text = "Srecan put i prijatno putovanje! :)";
             this.label8.Click += new System.EventHandler(this.label8_Click);
@@ -168,7 +178,8 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(404, 186);
+            this.label9.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label9.Location = new System.Drawing.Point(486, 212);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(55, 22);
             this.label9.TabIndex = 14;
@@ -176,36 +187,43 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(495, 186);
+            this.textBox5.Location = new System.Drawing.Point(558, 215);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(80, 20);
             this.textBox5.TabIndex = 15;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(65, 221);
+            this.button1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.button1.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.Info;
+            this.button1.Location = new System.Drawing.Point(16, 238);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(113, 29);
+            this.button1.Size = new System.Drawing.Size(119, 39);
             this.button1.TabIndex = 16;
             this.button1.Text = "SAVE";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(210, 221);
+            this.button2.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.button2.Font = new System.Drawing.Font("Tempus Sans ITC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.Info;
+            this.button2.Location = new System.Drawing.Point(154, 238);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(113, 29);
+            this.button2.Size = new System.Drawing.Size(121, 39);
             this.button2.TabIndex = 17;
             this.button2.Text = "CANCEL";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(309, 35);
+            this.label10.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label10.Location = new System.Drawing.Point(362, 37);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(75, 22);
             this.label10.TabIndex = 18;
@@ -213,8 +231,9 @@
             // 
             // workersComboBox
             // 
+            this.workersComboBox.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.workersComboBox.FormattingEnabled = true;
-            this.workersComboBox.Location = new System.Drawing.Point(395, 35);
+            this.workersComboBox.Location = new System.Drawing.Point(455, 38);
             this.workersComboBox.Name = "workersComboBox";
             this.workersComboBox.Size = new System.Drawing.Size(195, 21);
             this.workersComboBox.TabIndex = 19;
@@ -228,7 +247,8 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(390, 82);
+            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.ButtonHighlight;
+            this.dateTimePicker1.Location = new System.Drawing.Point(455, 84);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 20;
@@ -237,8 +257,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Autobuska_stanica.Properties.Resources.fb;
-            this.ClientSize = new System.Drawing.Size(602, 262);
+            this.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.ClientSize = new System.Drawing.Size(662, 289);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.workersComboBox);
             this.Controls.Add(this.label10);

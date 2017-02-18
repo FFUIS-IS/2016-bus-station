@@ -300,6 +300,18 @@
   <ItemGroup>
     <None Include="Resources\fb.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginImage-400x300.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner-772x250.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginImage-400x3001.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
