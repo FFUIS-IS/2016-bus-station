@@ -32,7 +32,11 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fromTheCityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.informationToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toTheCityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.informationToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.workersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataEntryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,10 +57,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.deleteToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.informationToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.informationToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,7 +68,8 @@
             this.workersToolStripMenuItem,
             this.linessOfTransportToolStripMenuItem,
             this.ticketsToolStripMenuItem,
-            this.carrierToolStripMenuItem});
+            this.carrierToolStripMenuItem,
+            this.loginToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(669, 24);
@@ -94,6 +96,20 @@
             this.fromTheCityToolStripMenuItem.Text = "From the city";
             this.fromTheCityToolStripMenuItem.Click += new System.EventHandler(this.fromTheCityToolStripMenuItem_Click);
             // 
+            // deleteToolStripMenuItem2
+            // 
+            this.deleteToolStripMenuItem2.Name = "deleteToolStripMenuItem2";
+            this.deleteToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.deleteToolStripMenuItem2.Text = "Delete";
+            this.deleteToolStripMenuItem2.Click += new System.EventHandler(this.deleteToolStripMenuItem2_Click);
+            // 
+            // informationToolStripMenuItem1
+            // 
+            this.informationToolStripMenuItem1.Name = "informationToolStripMenuItem1";
+            this.informationToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.informationToolStripMenuItem1.Text = "Information";
+            this.informationToolStripMenuItem1.Click += new System.EventHandler(this.informationToolStripMenuItem1_Click);
+            // 
             // toTheCityToolStripMenuItem
             // 
             this.toTheCityToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -103,6 +119,20 @@
             this.toTheCityToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.toTheCityToolStripMenuItem.Text = "To the city";
             this.toTheCityToolStripMenuItem.Click += new System.EventHandler(this.toTheCityToolStripMenuItem_Click);
+            // 
+            // deleteToolStripMenuItem3
+            // 
+            this.deleteToolStripMenuItem3.Name = "deleteToolStripMenuItem3";
+            this.deleteToolStripMenuItem3.Size = new System.Drawing.Size(137, 22);
+            this.deleteToolStripMenuItem3.Text = "Delete";
+            this.deleteToolStripMenuItem3.Click += new System.EventHandler(this.deleteToolStripMenuItem3_Click);
+            // 
+            // informationToolStripMenuItem2
+            // 
+            this.informationToolStripMenuItem2.Name = "informationToolStripMenuItem2";
+            this.informationToolStripMenuItem2.Size = new System.Drawing.Size(137, 22);
+            this.informationToolStripMenuItem2.Text = "Information";
+            this.informationToolStripMenuItem2.Click += new System.EventHandler(this.informationToolStripMenuItem2_Click);
             // 
             // workersToolStripMenuItem
             // 
@@ -147,14 +177,14 @@
             // pregledToolStripMenuItem
             // 
             this.pregledToolStripMenuItem.Name = "pregledToolStripMenuItem";
-            this.pregledToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.pregledToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.pregledToolStripMenuItem.Text = "Information";
             this.pregledToolStripMenuItem.Click += new System.EventHandler(this.pregledToolStripMenuItem_Click);
             // 
             // unosToolStripMenuItem
             // 
             this.unosToolStripMenuItem.Name = "unosToolStripMenuItem";
-            this.unosToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.unosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.unosToolStripMenuItem.Text = "Data entry";
             this.unosToolStripMenuItem.Click += new System.EventHandler(this.unosToolStripMenuItem_Click);
             // 
@@ -170,7 +200,7 @@
             // issuingTicketsToolStripMenuItem
             // 
             this.issuingTicketsToolStripMenuItem.Name = "issuingTicketsToolStripMenuItem";
-            this.issuingTicketsToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.issuingTicketsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.issuingTicketsToolStripMenuItem.Text = "Issuing tickets";
             this.issuingTicketsToolStripMenuItem.Click += new System.EventHandler(this.issuingTicketsToolStripMenuItem_Click);
             // 
@@ -187,21 +217,21 @@
             // unosToolStripMenuItem1
             // 
             this.unosToolStripMenuItem1.Name = "unosToolStripMenuItem1";
-            this.unosToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
+            this.unosToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.unosToolStripMenuItem1.Text = "Data entry";
             this.unosToolStripMenuItem1.Click += new System.EventHandler(this.unosToolStripMenuItem1_Click);
             // 
             // pregledToolStripMenuItem1
             // 
             this.pregledToolStripMenuItem1.Name = "pregledToolStripMenuItem1";
-            this.pregledToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
+            this.pregledToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.pregledToolStripMenuItem1.Text = "Information";
             this.pregledToolStripMenuItem1.Click += new System.EventHandler(this.pregledToolStripMenuItem1_Click);
             // 
             // deleteToolStripMenuItem1
             // 
             this.deleteToolStripMenuItem1.Name = "deleteToolStripMenuItem1";
-            this.deleteToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
+            this.deleteToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.deleteToolStripMenuItem1.Text = "Delete";
             this.deleteToolStripMenuItem1.Click += new System.EventHandler(this.deleteToolStripMenuItem1_Click);
             // 
@@ -276,33 +306,12 @@
             this.label8.TabIndex = 8;
             this.label8.Text = "Autobuska stanica Pale";
             // 
-            // deleteToolStripMenuItem2
+            // loginToolStripMenuItem
             // 
-            this.deleteToolStripMenuItem2.Name = "deleteToolStripMenuItem2";
-            this.deleteToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
-            this.deleteToolStripMenuItem2.Text = "Delete";
-            this.deleteToolStripMenuItem2.Click += new System.EventHandler(this.deleteToolStripMenuItem2_Click);
-            // 
-            // informationToolStripMenuItem1
-            // 
-            this.informationToolStripMenuItem1.Name = "informationToolStripMenuItem1";
-            this.informationToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.informationToolStripMenuItem1.Text = "Information";
-            this.informationToolStripMenuItem1.Click += new System.EventHandler(this.informationToolStripMenuItem1_Click);
-            // 
-            // deleteToolStripMenuItem3
-            // 
-            this.deleteToolStripMenuItem3.Name = "deleteToolStripMenuItem3";
-            this.deleteToolStripMenuItem3.Size = new System.Drawing.Size(152, 22);
-            this.deleteToolStripMenuItem3.Text = "Delete";
-            this.deleteToolStripMenuItem3.Click += new System.EventHandler(this.deleteToolStripMenuItem3_Click);
-            // 
-            // informationToolStripMenuItem2
-            // 
-            this.informationToolStripMenuItem2.Name = "informationToolStripMenuItem2";
-            this.informationToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
-            this.informationToolStripMenuItem2.Text = "Information";
-            this.informationToolStripMenuItem2.Click += new System.EventHandler(this.informationToolStripMenuItem2_Click);
+            this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
+            this.loginToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.loginToolStripMenuItem.Text = "Login";
+            this.loginToolStripMenuItem.Click += new System.EventHandler(this.loginToolStripMenuItem_Click);
             // 
             // Bus_station
             // 
@@ -360,6 +369,7 @@
         private System.Windows.Forms.ToolStripMenuItem informationToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem informationToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
     }
 }
 

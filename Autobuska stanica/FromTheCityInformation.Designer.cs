@@ -35,16 +35,16 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(43, 36);
+            this.listBox1.Location = new System.Drawing.Point(43, 12);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(132, 69);
+            this.listBox1.Size = new System.Drawing.Size(186, 173);
             this.listBox1.TabIndex = 0;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(45, 138);
+            this.button1.Location = new System.Drawing.Point(76, 211);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 61);
+            this.button1.Size = new System.Drawing.Size(117, 39);
             this.button1.TabIndex = 1;
             this.button1.Text = "SHOW";
             this.button1.UseVisualStyleBackColor = true;

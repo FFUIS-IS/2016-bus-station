@@ -27,6 +27,7 @@ namespace Autobuska_stanica
         {
 
         }
+            
 
         private void pregledToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -146,6 +147,12 @@ namespace Autobuska_stanica
         {
             Form k = new ToTheCityDelete();
             k.Show();
+        }
+
+        private void loginToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form l = new Login();
+            l.Show();
         }
     }
 }

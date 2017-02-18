@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlServerCe;
+using Autobuska_stanica;
 
 namespace Autobuska_stanica
 {
@@ -20,6 +21,10 @@ namespace Autobuska_stanica
 
         private void button1_Click(object sender, EventArgs e)
         {
+            SqlCeConnection Connection = DbConnection.Instance.Connection;
+
+            SqlCeCommand command = new SqlCeCommand("INSERT INTO registration ([username],[password]) VALUES ('" + textBox1.Text + "', '" + textBox2.Text + "' ); ", Connection);
+
             if (textBox1.Text == "")
             {
                 MessageBox.Show("Niste unijeli Korisničko ime !", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -32,9 +37,7 @@ namespace Autobuska_stanica
                 textBox2.Focus();
                 return;
             }
-            SqlCeConnection Connection = DbConnection.Instance.Connection;
 
-            SqlCeCommand command = new SqlCeCommand("INSERT INTO Registration ([Username],[Password]) VALUES ('" + textBox1.Text + "', '" + textBox2.Text + "'); ", Connection);
 
             try
             {
@@ -42,15 +45,16 @@ namespace Autobuska_stanica
                 command.ExecuteNonQuery();
 
             }
+            
 
-            catch (Exception ee)
-            {
+              catch (Exception ee)
+              { 
 
-                MessageBox.Show("Registracija nije uspjela. \n Pokušajte ponovo");
+                  MessageBox.Show("Registracija nije uspjela. \n Pokušajte ponovo");
 
-                return;
+                  return;
 
-            }
+              }
 
             MessageBox.Show("Uspješna registracija", "Registracija", MessageBoxButtons.OK);
             textBox1.Clear();
@@ -65,5 +69,5 @@ namespace Autobuska_stanica
             this.Close();
         }
     }
-  }
+    }
 

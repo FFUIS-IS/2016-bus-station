@@ -8,66 +8,86 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlServerCe;
-using Autobuska_stanica.Models;
-using Autobuska_stanica.Repos;
+using Autobuska_stanica;
+using System.IO;
 
 namespace Autobuska_stanica
 {
     public partial class Login : Form
     {
-        public static string username;
-        public static string password;
-
-        SqlCeConnection Connection = DbConnection.Instance.Connection;
+        public static string usernamee;
+        public static string passwordd;
 
         public Login()
         {
             InitializeComponent();
-
         }
-        public bool loginSucces = false;
 
-        private void button1_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
 
-            username = usernameTextBox.Text;
-            password = passwordTextBox.Text;
+        }
 
-            User user = new User(username, password);
+        private void button1_Click(object sender, EventArgs e)
 
-            try
+        {
+
+
+            SqlCeConnection Connection = DbConnection.Instance.Connection;
+
+            SqlCeCommand command = new SqlCeCommand("SELECT Username, Password FROM Login ", Connection);
+
+            SqlCeDataReader dataReader = command.ExecuteReader();
             {
-                UserRepository.Login(user);
-                loginSucces = true;
-                DialogResult = DialogResult.OK;
-                Close();
+
+                if (textBox1.Text == "")
+                {
+                    MessageBox.Show("Niste unijeli Korisničko ime !", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    textBox1.Focus();
+                    return;
+                }
+                else if (textBox2.Text == "")
+                {
+                    MessageBox.Show("Niste unijeli šifru !", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    textBox2.Focus();
+                    return;
+                }
+
+
 
             }
 
-            catch (Exception exception)
+            while (dataReader.Read())
+            {
+                if (textBox1.Text == dataReader[0].ToString() && textBox2.Text == dataReader[1].ToString().Trim())
+                {
+                    usernamee = dataReader[0].ToString();
+                    passwordd = dataReader[1].ToString();
+                }
+            }
+
+            if (textBox1.Text == usernamee && textBox2.Text == passwordd.Trim())
             {
 
-                if (usernameTextBox.Text.Length == 0)
-                {
-                    MessageBox.Show(exception.Message);
-                    usernameTextBox.Text = "";
-                    usernameTextBox.Focus();
-                }
-                else if (passwordTextBox.Text.Length == 0)
-                {
-                    MessageBox.Show(exception.Message);
-                    passwordTextBox.Text = "";
-                    passwordTextBox.Focus();
-                }
-                else if (loginSucces != true)
-                {
-                    MessageBox.Show(exception.Message);
-                    usernameTextBox.Text = "";
-                    passwordTextBox.Text = "";
-                    usernameTextBox.Focus();
-                }
+                Bus_station p = new Bus_station();
+                p.Show();
+                this.Hide();
 
             }
+
+            else
+            {
+                MessageBox.Show("Pogrešeno uneseno korisničko ime ili šifra \n \n Pokušajte ponovo", "Prijava greške", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox1.Clear();
+                textBox2.Clear();
+                textBox1.Focus();
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Registration r = new Registration();
+            r.Show();
 
         }
 
@@ -75,15 +95,8 @@ namespace Autobuska_stanica
         {
             this.Close();
         }
-
-      
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
     }
-        }
-    
-    
+
+
+}
 
