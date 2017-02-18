@@ -25,9 +25,16 @@ namespace Autobuska_stanica
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            Opacity = 0;
+            Form loginForm = new Login();
+            DialogResult result = loginForm.ShowDialog();
+            Opacity = 1;
+            if (result == DialogResult.Cancel)
+            {
+                this.Close();
+            }
         }
-            
+
 
         private void pregledToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -151,8 +158,36 @@ namespace Autobuska_stanica
 
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form l = new Login();
-            l.Show();
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

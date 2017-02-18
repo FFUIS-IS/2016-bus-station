@@ -24,8 +24,6 @@ namespace Autobuska_stanica
         {
             SqlCeConnection Connection = DbConnection.Instance.Connection;
 
-            SqlCeCommand command = new SqlCeCommand("INSERT INTO Login ([username],[password]) VALUES ('" + textBox1.Text + "', '" + textBox2.Text + "' ); ", Connection);
-
             if (textBox1.Text == "")
             {
                 MessageBox.Show("Niste unijeli Korisničko ime !", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -38,31 +36,33 @@ namespace Autobuska_stanica
                 textBox2.Focus();
                 return;
             }
-
-
-            try
+            else
             {
+                SqlCeCommand command = new SqlCeCommand("INSERT INTO Login ([username],[password]) VALUES ('" + textBox1.Text + "', '" + textBox2.Text + "' ); ", Connection);
 
-                command.ExecuteNonQuery();
+                try
+                {
 
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Uspješna registracija", "Registracija", MessageBoxButtons.OK);
+
+                }
+
+
+                catch (Exception ee)
+                {
+
+                    MessageBox.Show("Registracija nije uspjela. \n" + ee.ToString());
+
+                    return;
+
+                }
+                textBox1.Clear();
+                textBox2.Clear();
+                textBox1.Focus();
+
+                this.Close();
             }
-            
-
-              catch (Exception ee)
-              { 
-
-                  MessageBox.Show("Registracija nije uspjela. \n Pokušajte ponovo");
-                
-                  return;
-
-              }
-
-            MessageBox.Show("Uspješna registracija", "Registracija", MessageBoxButtons.OK);
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox1.Focus();
-
-            this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)

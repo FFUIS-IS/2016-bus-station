@@ -17,7 +17,7 @@ namespace Autobuska_stanica
         private DbConnection()
         {
            // string dbPassword = File.ReadAllText(@"..\..\..\..\..\..\config.txt");
-             string connectionString = @"Data Source=D:\Autobuska stanica\2016-bus-station\Autobuska stanica\busstanicaa.sdf;Password=boj007";
+             string connectionString = @"Data Source=" + Program.path + "busstanicaa.sdf;Password=boj007";
 
              connection = new SqlCeConnection(connectionString);
              connection.Open();

@@ -68,11 +68,7 @@ namespace Autobuska_stanica
 
             if (textBox1.Text == usernamee && textBox2.Text == passwordd.Trim())
             {
-
-                Bus_station p = new Bus_station();
-                p.Show();
-                this.Hide();
-
+                DialogResult = DialogResult.OK;
             }
 
             else
