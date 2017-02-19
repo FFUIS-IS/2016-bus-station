@@ -61,6 +61,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ToTheCityInformation";
             this.Text = "ToTheCityInformation";
+            this.Load += new System.EventHandler(this.ToTheCityInformation_Load);
             this.ResumeLayout(false);
 
         }

@@ -177,13 +177,11 @@ D:\Autobuska stanica\2016-bus-station\Autobuska stanica\obj\Debug\Autobuska_stan
 D:\Autobuska stanica\2016-bus-station\Autobuska stanica\obj\Debug\Autobuska_stanica.LinesINFO.resources
 D:\Autobuska stanica\2016-bus-station\Autobuska stanica\obj\Debug\Autobuska_stanica.LinesEnetery.resources
 D:\Autobuska stanica\2016-bus-station\Autobuska stanica\obj\Debug\Autobuska_stanica.Properties.Resources.resources
-D:\Autobuska stanica\2016-bus-station\Autobuska stanica\obj\Debug\Autobuska_stanica.WorkersDelete.resources
 D:\Autobuska stanica\2016-bus-station\Autobuska stanica\obj\Debug\Autobuska_stanica.WorkersEntry.resources
 D:\Autobuska stanica\2016-bus-station\Autobuska stanica\obj\Debug\Autobuska_stanica.WorkersInformation.resources
 D:\Autobuska stanica\2016-bus-station\Autobuska stanica\obj\Debug\Autobuska stanica.csproj.GenerateResource.Cache
 D:\Autobuska stanica\2016-bus-station\Autobuska stanica\obj\Debug\Autobuska_stanica.CarrierEntry.resources
 D:\Autobuska stanica\2016-bus-station\Autobuska stanica\obj\Debug\Autobuska_stanica.CarrierInformation.resources
-D:\Autobuska stanica\2016-bus-station\Autobuska stanica\obj\Debug\Autobuska_stanica.CarrierDelete.resources
 D:\Autobuska stanica\2016-bus-station\Autobuska stanica\obj\Debug\Autobuska_stanica.Login.resources
 D:\Autobuska stanica\2016-bus-station\Autobuska stanica\obj\Debug\Autobuska_stanica.Registration.resources
 D:\Autobuska stanica\2016-bus-station\Autobuska stanica\obj\Debug\Autobuska_stanica.Tickets.resources

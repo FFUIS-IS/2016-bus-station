@@ -81,7 +81,7 @@ namespace Autobuska_stanica
             }
             catch (Exception ee)
             {
-                MessageBox.Show("Nepostojeci radnik\r Greska:" + ee.Message);
+                MessageBox.Show("Nepostojeca linija prevoza\r Greska:" + ee.Message);
                 
             }
         }

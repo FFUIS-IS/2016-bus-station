@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlServerCe;
 using Autobuska_stanica;
 using System.IO;
+using System.Data.SqlTypes;
 
 
 
@@ -28,22 +29,21 @@ namespace Autobuska_stanica
             try
             {
 
-
-                /*onaj prvi red */
+                
                  SqlCeConnection Connection = DbConnection.Instance.Connection;
            
-                /*onaj drugi red*/
-            SqlCeCommand command = new SqlCeCommand("SELECT first_name, last_name, jmbg, contact, address  FROM workers ", Connection);
+                
+            SqlCeCommand command = new SqlCeCommand("SELECT first_name, last_name FROM workers ", Connection);
 
             SqlCeDataReader dataReader = command.ExecuteReader();
 
 
-                //dataReader.Read();
+                dataReader.Read();
 
                 while (dataReader.Read())
              {
                     
-                listBox1.Items.Add(dataReader.GetString(0) + "  " + dataReader.GetString(1)+" "+ dataReader.GetString(2)+ " "+ dataReader.GetString(3) +" "+ dataReader.GetString(4));
+                listBox1.Items.Add(dataReader.GetString(0) + "  " + dataReader.GetString(1));
              }
              dataReader.Close();
             }
@@ -67,6 +67,33 @@ namespace Autobuska_stanica
         private void WorkersInformation_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SqlCeConnection Connection = DbConnection.Instance.Connection;
+
+            SqlCeCommand command = Connection.CreateCommand();
+
+            DialogResult dr = MessageBox.Show("Da li želite da izbrišete ?", "Brisanje", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (dr == DialogResult.Yes)
+            {
+
+                listBox1.Items.Remove(listBox1.SelectedItem);
+
+                command.CommandText = "DELETE FROM workers WHERE first_name = '" + listBox1.SelectedItem + "'  ";
+                command.ExecuteReader();
+
+            }
+            else if (dr == DialogResult.No)
+            {
+
+                this.Close();
+                CarrierInformation CI = new CarrierInformation();
+                CI.Show();
+
+            }
         }
     }
     }

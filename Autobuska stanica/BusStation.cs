@@ -75,12 +75,7 @@ namespace Autobuska_stanica
             d1.Show();
         }
 
-        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form d2 = new WorkersDelete();
-            d2.Show();
-
-        }
+        
 
         private void pregledToolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -89,13 +84,7 @@ namespace Autobuska_stanica
 
         }
 
-        private void deleteToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            Form d4 = new CarrierDelete();
-            d4.Show();
-
-        }
-
+       
         private void pricelistToolStripMenuItem_Click(object sender, EventArgs e)
         {
 

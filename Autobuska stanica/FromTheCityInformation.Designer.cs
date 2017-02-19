@@ -79,7 +79,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Autobuska_stanica.Properties.Resources.London_buses_of_Arriva__London_General_and_Metrobus_in_West_Croydon_Bus_Station__London_27_June_2007;
-            this.ClientSize = new System.Drawing.Size(614, 254);
+            this.ClientSize = new System.Drawing.Size(618, 301);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
