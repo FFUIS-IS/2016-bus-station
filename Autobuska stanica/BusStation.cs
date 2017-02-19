@@ -194,5 +194,11 @@ namespace Autobuska_stanica
         {
 
         }
+
+        private void deleteToolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            Form l = new LinesDelete();
+            l.Show();
+        }
     }
 }
