@@ -189,5 +189,10 @@ namespace Autobuska_stanica
         {
 
         }
+
+        private void carrierToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

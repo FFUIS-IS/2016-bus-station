@@ -64,7 +64,7 @@ namespace Autobuska_stanica
 
                         command.CommandText = "SELECT ID FROM carrier WHERE name = '" + carrierComboBox.Text + "';";
                         command1.CommandText = "SELECT ID FROM workers WHERE first_name  ='" + workersComboBox.Text + "'; ";
-                        //  command2.CommandText = "SELECT ID FROM lines WHERE from_the_city_id = '" + linesComboBox.Text + "';";
+                       // command2.CommandText = "SELECT ID FROM lines WHERE from_the_city_id = '" + linesComboBox.Text + "';";
 
 
 
@@ -73,16 +73,16 @@ namespace Autobuska_stanica
                         int d = rdr.GetInt32(0);
 
 
-                        SqlCeDataReader rdr1 = command1.ExecuteReader();
-                        rdr1.Read();
-                        int j = rdr1.GetInt32(0);
+                       // SqlCeDataReader rdr1 = command1.ExecuteReader();
+                      //  rdr1.Read();
+                       // int j = rdr1.GetInt32(0);
 
                         //SqlCeDataReader rdr2 = command2.ExecuteReader();
                         //rdr2.Read();
                         //int k = rdr2.GetInt32(0);
 
 
-                        command.CommandText = "INSERT INTO tickets (carrier, workers_id, lines) VALUES (" + d + " , " + j + ", " + indexOfLine + " );";
+                       // command.CommandText = "INSERT INTO tickets (carrier, workers_id, lines) VALUES (" + d + " , " + j + ", " + indexOfLine + " );";
 
                         try
                         {
