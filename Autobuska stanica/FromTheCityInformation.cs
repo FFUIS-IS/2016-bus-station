@@ -84,5 +84,10 @@ namespace Autobuska_stanica
 
             }
         }
+
+        private void FromTheCityInformation_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

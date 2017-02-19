@@ -28,7 +28,22 @@ namespace Autobuska_stanica
 
             try
             {
-                command.ExecuteNonQuery();
+
+                if (textBox1.Text == "")
+                { MessageBox.Show("Niste unijeli ime!"); }
+
+                else if (textBox2.Text == "")
+                { MessageBox.Show("Niste unijeli adresu!"); }
+
+                else
+                {
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Unos je uspio!");
+                    textBox1.Clear();
+                    textBox2.Clear();
+                    textBox1.Focus();
+                }
+               
             }
 
             catch (Exception ee)
@@ -41,19 +56,6 @@ namespace Autobuska_stanica
             }
 
 
-            if (textBox1.Text == "")
-            { MessageBox.Show("Niste unijeli ime!"); }
-
-            else if (textBox2.Text == "")
-            { MessageBox.Show("Niste unijeli prezime!"); }
-
-            else
-            {
-                MessageBox.Show("Unos je uspio!");
-                textBox1.Clear();
-                textBox2.Clear();
-                textBox1.Focus();
-            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

@@ -25,7 +25,7 @@ namespace Autobuska_stanica
             path = path.Substring(0, path.LastIndexOf('\\')+1);
        Application.Run(new Bus_station());
 
-           ;
+           ;    
         }
     }
 }

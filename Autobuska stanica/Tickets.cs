@@ -51,6 +51,15 @@ namespace Autobuska_stanica
             {
                 MessageBox.Show("Niste unijeli grad dolaska!");
             }
+            else if (textBox4.Text == " ")
+            {
+                MessageBox.Show("Niste unijeli broj sjedista!");
+            }
+            else if (textBox3.Text == " ")
+            {
+                MessageBox.Show("Niste unijeli broj perona!");
+            }
+           
 
             else
             {
@@ -213,6 +222,23 @@ namespace Autobuska_stanica
                         textBox5.Text = "" + (Int32.Parse(textBox1.Text) * reader.GetInt32(0));
                     }
             }
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            printDialog1.ShowDialog();
+        }
+
+        private void nazadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Bus_station bs = new Bus_station();
+            bs.Show();
         }
     }
 }

@@ -39,7 +39,19 @@ namespace Autobuska_stanica
 
             try
             {
-                command.ExecuteNonQuery();
+
+                if (textBox1.Text == "")
+                { MessageBox.Show("Niste unijeli ime!"); }
+
+
+                else
+                {
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Unos je uspio!");
+                    textBox1.Clear();
+                    textBox1.Focus();
+                }
+               
             }
 
             catch (Exception ee)
@@ -52,16 +64,6 @@ namespace Autobuska_stanica
             }
 
 
-            if (textBox1.Text == "")
-            { MessageBox.Show("Niste unijeli ime!"); }
-
-
-            else
-            {
-                MessageBox.Show("Unos je uspio!");
-                textBox1.Clear();
-                textBox1.Focus();
-            }
 
         }
 

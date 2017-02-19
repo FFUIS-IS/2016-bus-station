@@ -22,7 +22,7 @@ namespace Autobuska_stanica
         {
          //   try
            // {
-                /*onaj prvi red */
+                
                 SqlCeConnection Connection = DbConnection.Instance.Connection;
 
                 SqlCeCommand command = new SqlCeCommand("SELECT from_the_city_id, to_the_city_id, time_of_departure, time_of_arrival FROM lines;", Connection);
@@ -77,31 +77,6 @@ namespace Autobuska_stanica
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            SqlCeConnection Connection = DbConnection.Instance.Connection;
-
-            SqlCeCommand command = Connection.CreateCommand();
-
-            DialogResult dr = MessageBox.Show("Da li želite da izbrišete ?", "Brisanje", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-            if (dr == DialogResult.Yes)
-            {
-
-                listBox1.Items.Remove(listBox1.SelectedItem);
-
-                command.CommandText = "DELETE FROM lines WHERE from_the_city_id = '" + listBox1.SelectedItem + "'  ";
-                command.ExecuteReader();
-
-            }
-            else if (dr == DialogResult.No)
-            {
-
-                this.Close();
-                LinesINFO CI = new LinesINFO();
-                CI.Show();
-
-            }
-        }
+       
     }
 }

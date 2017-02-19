@@ -69,6 +69,18 @@ namespace Autobuska_stanica
         {
             this.Close();
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (checkBox1.Checked)
+            {
+                textBox2.PasswordChar = '*';
+            }
+            else
+                textBox2.PasswordChar = '\0';
+        }
     }
     }
+    
 

@@ -63,6 +63,16 @@ namespace Autobuska_stanica.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _16225630_print_icon_Stock_Photo_printer {
+            get {
+                object obj = ResourceManager.GetObject("16225630-print-icon-Stock-Photo-printer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _33097578 {
             get {
                 object obj = ResourceManager.GetObject("33097578", resourceCulture);
@@ -87,6 +97,16 @@ namespace Autobuska_stanica.Properties {
         internal static System.Drawing.Bitmap _6cff81ed2fd5fd02c6bfe5986e55231b_XL {
             get {
                 object obj = ResourceManager.GetObject("6cff81ed2fd5fd02c6bfe5986e55231b_XL", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Back {
+            get {
+                object obj = ResourceManager.GetObject("Back", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -187,6 +207,26 @@ namespace Autobuska_stanica.Properties {
         internal static System.Drawing.Bitmap download__3_ {
             get {
                 object obj = ResourceManager.GetObject("download (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap download__4_ {
+            get {
+                object obj = ResourceManager.GetObject("download (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap download__5_ {
+            get {
+                object obj = ResourceManager.GetObject("download (5)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -298,6 +338,16 @@ namespace Autobuska_stanica.Properties {
             get {
                 object obj = ResourceManager.GetObject("London_buses_of_Arriva,_London_General_and_Metrobus_in_West_Croydon_Bus_Station,_" +
                         "London_27_June_2007", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Nerja_Bus_Station_3 {
+            get {
+                object obj = ResourceManager.GetObject("Nerja-Bus-Station-3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

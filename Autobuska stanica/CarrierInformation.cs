@@ -24,10 +24,10 @@ namespace Autobuska_stanica
             {
 
 
-                /*onaj prvi red */
+                
                 SqlCeConnection Connection = DbConnection.Instance.Connection;
 
-                /*onaj drugi red*/
+                
                 SqlCeCommand command = new SqlCeCommand("SELECT Name, Address FROM Carrier ", Connection);
 
                 SqlCeDataReader dataReader = command.ExecuteReader();
