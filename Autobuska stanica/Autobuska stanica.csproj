@@ -121,12 +121,6 @@
     <Compile Include="FromTheCity.Designer.cs">
       <DependentUpon>FromTheCity.cs</DependentUpon>
     </Compile>
-    <Compile Include="FromTheCityDelete.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FromTheCityDelete.Designer.cs">
-      <DependentUpon>FromTheCityDelete.cs</DependentUpon>
-    </Compile>
     <Compile Include="FromTheCityInformation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,12 +165,6 @@
     <Compile Include="ToTheCity.Designer.cs">
       <DependentUpon>ToTheCity.cs</DependentUpon>
     </Compile>
-    <Compile Include="ToTheCityDelete.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ToTheCityDelete.Designer.cs">
-      <DependentUpon>ToTheCityDelete.cs</DependentUpon>
-    </Compile>
     <Compile Include="ToTheCityInformation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,9 +198,6 @@
     <EmbeddedResource Include="FromTheCity.resx">
       <DependentUpon>FromTheCity.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FromTheCityDelete.resx">
-      <DependentUpon>FromTheCityDelete.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FromTheCityInformation.resx">
       <DependentUpon>FromTheCityInformation.cs</DependentUpon>
     </EmbeddedResource>
@@ -243,9 +228,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ToTheCity.resx">
       <DependentUpon>ToTheCity.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ToTheCityDelete.resx">
-      <DependentUpon>ToTheCityDelete.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ToTheCityInformation.resx">
       <DependentUpon>ToTheCityInformation.cs</DependentUpon>
@@ -353,6 +335,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\London_buses_of_Arriva,_London_General_and_Metrobus_in_West_Croydon_Bus_Station,_London_27_June_2007.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\k1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6cff81ed2fd5fd02c6bfe5986e55231b_XL.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

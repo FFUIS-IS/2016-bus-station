@@ -61,28 +61,26 @@ namespace Autobuska_stanica
         {
             SqlCeConnection Connection = DbConnection.Instance.Connection;
 
-            SqlCeCommand command1 = Connection.CreateCommand();
-            SqlCeCommand command2 = Connection.CreateCommand();
+            SqlCeCommand command = Connection.CreateCommand();
 
-            try
+            DialogResult dr = MessageBox.Show("Da li želite da izbrišete ?", "Brisanje", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (dr == DialogResult.Yes)
             {
-                int indexOfLine = Int32.Parse(comboBox1.SelectedItem.ToString().Substring(0, comboBox1.SelectedItem.ToString().IndexOf(' ')));
 
-                command1.CommandText = "SELECT from_the_citiy_id, to_the_city_id FROM lines WHERE from_the_city_id='" + comboBox1.Text + "' ; ";
-                SqlCeDataReader dataReader = command1.ExecuteReader();
-                dataReader.Read();
-                command2.CommandText = "DELETE FROM lines  WHERE to_the_city_id=" + dataReader.GetInt32(0) + " ;";
-                SqlCeDataReader dataReader1 = command2.ExecuteReader();
-                dataReader1.Read();
+                comboBox1.Items.Remove(comboBox1.SelectedItem);
 
-                MessageBox.Show("Uspjesno ste izbrisali radnika!");
-
+                command.CommandText = "DELETE FROM lines WHERE from_the_city_id = '" + comboBox1.SelectedItem + "'  ";
+                command.ExecuteReader();
 
             }
-            catch (Exception ee)
+            else if (dr == DialogResult.No)
             {
-                MessageBox.Show("Nepostojeca linija prevoza\r Greska:" + ee.Message);
-                
+
+                this.Close();
+                LinesDelete CI = new LinesDelete();
+                CI.Show();
+
             }
         }
     }

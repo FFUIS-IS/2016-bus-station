@@ -59,32 +59,30 @@ namespace Autobuska_stanica
 
         private void button2_Click(object sender, EventArgs e)
         {
+
             SqlCeConnection Connection = DbConnection.Instance.Connection;
 
-            SqlCeCommand command1 = Connection.CreateCommand();
-            SqlCeCommand command2 = Connection.CreateCommand();
+            SqlCeCommand command = Connection.CreateCommand();
 
+            DialogResult dr = MessageBox.Show("Da li želite da izbrišete ?", "Brisanje", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-            try
+            if (dr == DialogResult.Yes)
             {
-                command1.CommandText = "SELECT Name FROM from_the_city WHERE Name ='" + listBox1.Text + "' ; ";
-                SqlCeDataReader dataReader = command1.ExecuteReader();
-                dataReader.Read();
-                command2.CommandText = "DELETE FROM from_the_city WHERE Name = " + dataReader.GetString(0) + " ;";
-                SqlCeDataReader dataReader1 = command2.ExecuteReader();
-                dataReader1.Read();
 
+                listBox1.Items.Remove(listBox1.SelectedItem);
 
-                MessageBox.Show("Uspjesno ste izbrisali grad polaska!");
-
+                command.CommandText = "DELETE FROM from_the_city WHERE name = '" + listBox1.SelectedItem + "'  ";
+                command.ExecuteReader();
 
             }
-            catch (Exception ee)
+            else if (dr == DialogResult.No)
             {
-                MessageBox.Show("Nepostojeci grad \r Greska:" + ee.Message);
+
+                this.Close();
+                FromTheCityInformation CI = new FromTheCityInformation();
+                CI.Show();
 
             }
-            listBox1.ClearSelected();
         }
     }
 }

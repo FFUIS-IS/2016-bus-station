@@ -90,7 +90,7 @@ namespace Autobuska_stanica
             {
 
                 this.Close();
-                CarrierInformation CI = new CarrierInformation();
+                WorkersInformation CI = new WorkersInformation();
                 CI.Show();
 
             }

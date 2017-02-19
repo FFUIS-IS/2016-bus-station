@@ -69,7 +69,7 @@ namespace Autobuska_stanica
             rdr1.Read();
             int f = rdr1.GetInt32(0);
 
-            command.CommandText = "INSERT INTO lines (from_the_city_id,to_the_city_id, price) VALUES (" + d + ", " + f + ", " + Int32.Parse(priceTextBox.Text) + ");";
+            command.CommandText = "INSERT INTO lines (from_the_city_id,to_the_city_id, time_of_departure, time_of_arrival, price) VALUES (" + d + ", " + f + ",'" + textBox1.Text+"','"+textBox2.Text+"', " + Int32.Parse(priceTextBox.Text) + " );";
 
             try
             {

@@ -84,6 +84,16 @@ namespace Autobuska_stanica.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _6cff81ed2fd5fd02c6bfe5986e55231b_XL {
+            get {
+                object obj = ResourceManager.GetObject("6cff81ed2fd5fd02c6bfe5986e55231b_XL", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap banner_772x250 {
             get {
                 object obj = ResourceManager.GetObject("banner-772x250", resourceCulture);
@@ -237,6 +247,16 @@ namespace Autobuska_stanica.Properties {
         internal static System.Drawing.Bitmap k {
             get {
                 object obj = ResourceManager.GetObject("k", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap k1 {
+            get {
+                object obj = ResourceManager.GetObject("k1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

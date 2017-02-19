@@ -121,12 +121,7 @@ namespace Autobuska_stanica
 
         }
 
-        private void deleteToolStripMenuItem2_Click(object sender, EventArgs e)
-        {
-            Form d8 = new FromTheCityDelete();
-            d8.Show();
-        }
-
+        
         private void informationToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Form d9 = new FromTheCityInformation();
@@ -139,11 +134,7 @@ namespace Autobuska_stanica
             j.Show();
         }
 
-        private void deleteToolStripMenuItem3_Click(object sender, EventArgs e)
-        {
-            Form k = new ToTheCityDelete();
-            k.Show();
-        }
+       
 
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
         {

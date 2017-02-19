@@ -63,6 +63,33 @@ namespace Autobuska_stanica
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SqlCeConnection Connection = DbConnection.Instance.Connection;
+
+            SqlCeCommand command = Connection.CreateCommand();
+
+            DialogResult dr = MessageBox.Show("Da li želite da izbrišete ?", "Brisanje", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (dr == DialogResult.Yes)
+            {
+
+                listBox1.Items.Remove(listBox1.SelectedItem);
+
+                command.CommandText = "DELETE FROM to_the_city WHERE name = '" + listBox1.SelectedItem + "'  ";
+                command.ExecuteReader();
+
+            }
+            else if (dr == DialogResult.No)
+            {
+
+                this.Close();
+                ToTheCityInformation CI = new ToTheCityInformation();
+                CI.Show();
+
+            }
+        }
     }
 }
 

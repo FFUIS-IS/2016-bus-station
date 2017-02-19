@@ -40,18 +40,16 @@
             this.workersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataEntryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.linessOfTransportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pregledToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.unosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.ticketsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.issuingTicketsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.carrierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.unosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pregledToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.deleteToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,7 +63,7 @@
             this.carrierToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 24);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(669, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(548, 29);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -95,7 +93,6 @@
             this.deleteToolStripMenuItem2.Name = "deleteToolStripMenuItem2";
             this.deleteToolStripMenuItem2.Size = new System.Drawing.Size(162, 26);
             this.deleteToolStripMenuItem2.Text = "Delete";
-            this.deleteToolStripMenuItem2.Click += new System.EventHandler(this.deleteToolStripMenuItem2_Click);
             // 
             // informationToolStripMenuItem1
             // 
@@ -119,7 +116,6 @@
             this.deleteToolStripMenuItem3.Name = "deleteToolStripMenuItem3";
             this.deleteToolStripMenuItem3.Size = new System.Drawing.Size(162, 26);
             this.deleteToolStripMenuItem3.Text = "Delete";
-            this.deleteToolStripMenuItem3.Click += new System.EventHandler(this.deleteToolStripMenuItem3_Click);
             // 
             // informationToolStripMenuItem2
             // 
@@ -132,8 +128,7 @@
             // 
             this.workersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dataEntryToolStripMenuItem,
-            this.informationToolStripMenuItem,
-            this.deleteToolStripMenuItem});
+            this.informationToolStripMenuItem});
             this.workersToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.workersToolStripMenuItem.Name = "workersToolStripMenuItem";
             this.workersToolStripMenuItem.Size = new System.Drawing.Size(81, 25);
@@ -152,13 +147,6 @@
             this.informationToolStripMenuItem.Size = new System.Drawing.Size(162, 26);
             this.informationToolStripMenuItem.Text = "Information";
             this.informationToolStripMenuItem.Click += new System.EventHandler(this.informationToolStripMenuItem_Click);
-            // 
-            // deleteToolStripMenuItem
-            // 
-            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(162, 26);
-            this.deleteToolStripMenuItem.Text = "Delete";
-           
             // 
             // linessOfTransportToolStripMenuItem
             // 
@@ -185,6 +173,13 @@
             this.unosToolStripMenuItem.Text = "Data entry";
             this.unosToolStripMenuItem.Click += new System.EventHandler(this.unosToolStripMenuItem_Click);
             // 
+            // deleteToolStripMenuItem4
+            // 
+            this.deleteToolStripMenuItem4.Name = "deleteToolStripMenuItem4";
+            this.deleteToolStripMenuItem4.Size = new System.Drawing.Size(162, 26);
+            this.deleteToolStripMenuItem4.Text = "Delete";
+            this.deleteToolStripMenuItem4.Click += new System.EventHandler(this.deleteToolStripMenuItem4_Click);
+            // 
             // ticketsToolStripMenuItem
             // 
             this.ticketsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -206,8 +201,7 @@
             // 
             this.carrierToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.unosToolStripMenuItem1,
-            this.pregledToolStripMenuItem1,
-            this.deleteToolStripMenuItem1});
+            this.pregledToolStripMenuItem1});
             this.carrierToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.carrierToolStripMenuItem.Name = "carrierToolStripMenuItem";
             this.carrierToolStripMenuItem.Size = new System.Drawing.Size(70, 25);
@@ -228,34 +222,21 @@
             this.pregledToolStripMenuItem1.Text = "Information";
             this.pregledToolStripMenuItem1.Click += new System.EventHandler(this.pregledToolStripMenuItem1_Click);
             // 
-            // deleteToolStripMenuItem1
-            // 
-            this.deleteToolStripMenuItem1.Name = "deleteToolStripMenuItem1";
-            this.deleteToolStripMenuItem1.Size = new System.Drawing.Size(162, 26);
-            this.deleteToolStripMenuItem1.Text = "Delete";
-           
-            // 
             // menuStrip2
             // 
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(669, 24);
+            this.menuStrip2.Size = new System.Drawing.Size(548, 24);
             this.menuStrip2.TabIndex = 1;
             this.menuStrip2.Text = "menuStrip2";
-            // 
-            // deleteToolStripMenuItem4
-            // 
-            this.deleteToolStripMenuItem4.Name = "deleteToolStripMenuItem4";
-            this.deleteToolStripMenuItem4.Size = new System.Drawing.Size(162, 26);
-            this.deleteToolStripMenuItem4.Text = "Delete";
-            this.deleteToolStripMenuItem4.Click += new System.EventHandler(this.deleteToolStripMenuItem4_Click);
             // 
             // Bus_station
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Autobuska_stanica.Properties.Resources._6cff81ed2fd5fd02c6bfe5986e55231b_XL;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(669, 489);
+            this.ClientSize = new System.Drawing.Size(548, 362);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.menuStrip2);
             this.Cursor = System.Windows.Forms.Cursors.Default;
@@ -282,8 +263,6 @@
         private System.Windows.Forms.ToolStripMenuItem workersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dataEntryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem informationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem ticketsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem issuingTicketsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cityToolStripMenuItem;
