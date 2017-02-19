@@ -63,6 +63,16 @@ namespace Autobuska_stanica.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _33097578 {
+            get {
+                object obj = ResourceManager.GetObject("33097578", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _46cf792e49674396ecaae68caa8013b6_for_a_bus_driver_part_ii_bus_conductor_clipart_750_678 {
             get {
                 object obj = ResourceManager.GetObject("46cf792e49674396ecaae68caa8013b6_for-a-bus-driver-part-ii-bus-conductor-clipart_7" +
@@ -204,6 +214,16 @@ namespace Autobuska_stanica.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap images__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("images (1)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap jj {
             get {
                 object obj = ResourceManager.GetObject("jj", resourceCulture);
@@ -247,6 +267,17 @@ namespace Autobuska_stanica.Properties {
         internal static System.Drawing.Bitmap loginImage_400x3001 {
             get {
                 object obj = ResourceManager.GetObject("loginImage-400x3001", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap London_buses_of_Arriva__London_General_and_Metrobus_in_West_Croydon_Bus_Station__London_27_June_2007 {
+            get {
+                object obj = ResourceManager.GetObject("London_buses_of_Arriva,_London_General_and_Metrobus_in_West_Croydon_Bus_Station,_" +
+                        "London_27_June_2007", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

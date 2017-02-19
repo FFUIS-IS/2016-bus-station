@@ -38,7 +38,7 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(25, 46);
+            this.listBox1.Location = new System.Drawing.Point(25, 89);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(222, 108);
             this.listBox1.TabIndex = 0;
@@ -46,7 +46,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(279, 46);
+            this.button1.Location = new System.Drawing.Point(292, 89);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(122, 39);
             this.button1.TabIndex = 1;
@@ -66,7 +66,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(279, 112);
+            this.button2.Location = new System.Drawing.Point(292, 154);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(126, 43);
             this.button2.TabIndex = 3;
@@ -78,8 +78,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Autobuska_stanica.Properties.Resources.k;
-            this.ClientSize = new System.Drawing.Size(661, 228);
+            this.BackgroundImage = global::Autobuska_stanica.Properties.Resources.London_buses_of_Arriva__London_General_and_Metrobus_in_West_Croydon_Bus_Station__London_27_June_2007;
+            this.ClientSize = new System.Drawing.Size(614, 254);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);

@@ -354,6 +354,15 @@
   <ItemGroup>
     <None Include="Resources\bus_driver-CT.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %281%291.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\33097578.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\London_buses_of_Arriva,_London_General_and_Metrobus_in_West_Croydon_Bus_Station,_London_27_June_2007.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
