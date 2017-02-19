@@ -63,9 +63,70 @@ namespace Autobuska_stanica.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _46cf792e49674396ecaae68caa8013b6_for_a_bus_driver_part_ii_bus_conductor_clipart_750_678 {
+            get {
+                object obj = ResourceManager.GetObject("46cf792e49674396ecaae68caa8013b6_for-a-bus-driver-part-ii-bus-conductor-clipart_7" +
+                        "50-678", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap banner_772x250 {
             get {
                 object obj = ResourceManager.GetObject("banner-772x250", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bus_256 {
+            get {
+                object obj = ResourceManager.GetObject("bus_256", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bus_2561 {
+            get {
+                object obj = ResourceManager.GetObject("bus_2561", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bus_2562 {
+            get {
+                object obj = ResourceManager.GetObject("bus_2562", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bus_driver_carman_white_space_isolated_43565398 {
+            get {
+                object obj = ResourceManager.GetObject("bus-driver-carman-white-space-isolated-43565398", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bus_driver_CT {
+            get {
+                object obj = ResourceManager.GetObject("bus_driver-CT", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -186,6 +247,16 @@ namespace Autobuska_stanica.Properties {
         internal static System.Drawing.Bitmap loginImage_400x3001 {
             get {
                 object obj = ResourceManager.GetObject("loginImage-400x3001", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ruma_bec {
+            get {
+                object obj = ResourceManager.GetObject("ruma-bec", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

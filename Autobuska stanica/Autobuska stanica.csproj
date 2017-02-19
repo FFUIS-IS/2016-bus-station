@@ -333,6 +333,27 @@
   <ItemGroup>
     <None Include="Resources\k.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ruma-bec.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bus_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bus_2561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bus_2562.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\46cf792e49674396ecaae68caa8013b6_for-a-bus-driver-part-ii-bus-conductor-clipart_750-678.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bus-driver-carman-white-space-isolated-43565398.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bus_driver-CT.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

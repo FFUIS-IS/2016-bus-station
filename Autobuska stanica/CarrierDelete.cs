@@ -35,14 +35,17 @@ namespace Autobuska_stanica
             SqlCeCommand command1 = Connection.CreateCommand();
             SqlCeCommand command2 = Connection.CreateCommand();
 
+
             try
             {
                 command1.CommandText = "SELECT Name FROM Carrier WHERE Name ='" + textBox1.Text + "' ; ";
                 SqlCeDataReader dataReader = command1.ExecuteReader();
                 dataReader.Read();
-                command2.CommandText = "DELETE FROM Carrier WHERE Name = '" + dataReader.GetString(0) + "' ;";
+                command2.CommandText = "DELETE FROM carrier WHERE name ='" + dataReader.GetString(0) + "' ;";
                 SqlCeDataReader dataReader1 = command2.ExecuteReader();
                 dataReader1.Read();
+
+
 
                 MessageBox.Show("Uspjesno ste izbrisali prevoznika!");
 
