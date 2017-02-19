@@ -48,10 +48,17 @@ namespace Autobuska_stanica
 
             }
         }
+        private FromTheCityInformation SelectFromTheCity()
+        {
+            return [listBox1.SelectedIndex];
+        }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+            FromTheCityInformation current = SelectFromTheCity();
+            Fill(current);
+            ShowFilmLabels();
         }
     }
 }
