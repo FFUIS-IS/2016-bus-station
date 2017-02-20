@@ -57,5 +57,10 @@ namespace Autobuska_stanica
         {
             this.Close();
         }
+
+        private void ToTheCity_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

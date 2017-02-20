@@ -50,9 +50,9 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.nazadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -272,6 +272,17 @@
             // 
             this.printDialog1.UseEXDialog = true;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nazadToolStripMenuItem,
+            this.printToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(662, 24);
+            this.menuStrip1.TabIndex = 21;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
             // nazadToolStripMenuItem
             // 
             this.nazadToolStripMenuItem.Image = global::Autobuska_stanica.Properties.Resources.Back;
@@ -287,17 +298,6 @@
             this.printToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.printToolStripMenuItem.Text = "Print";
             this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nazadToolStripMenuItem,
-            this.printToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(662, 24);
-            this.menuStrip1.TabIndex = 21;
-            this.menuStrip1.Text = "menuStrip1";
             // 
             // Tickets
             // 
@@ -329,6 +329,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Tickets";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tickets";
             this.Load += new System.EventHandler(this.Tickets_Load);
             this.menuStrip1.ResumeLayout(false);

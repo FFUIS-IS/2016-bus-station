@@ -75,6 +75,7 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LinesINFO";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Information";
             this.Load += new System.EventHandler(this.LinesINFO_Load);
             this.ResumeLayout(false);

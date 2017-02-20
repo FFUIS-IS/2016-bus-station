@@ -97,6 +97,7 @@
             this.Controls.Add(this.button1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FromTheCity";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add";
             this.Load += new System.EventHandler(this.FromTheCity_Load);
             this.ResumeLayout(false);

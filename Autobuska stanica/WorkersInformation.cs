@@ -29,23 +29,23 @@ namespace Autobuska_stanica
             try
             {
 
-                
-                 SqlCeConnection Connection = DbConnection.Instance.Connection;
-           
-                
-            SqlCeCommand command = new SqlCeCommand("SELECT first_name, last_name FROM workers ", Connection);
 
-            SqlCeDataReader dataReader = command.ExecuteReader();
+                SqlCeConnection Connection = DbConnection.Instance.Connection;
+
+
+                SqlCeCommand command = new SqlCeCommand("SELECT first_name, last_name FROM workers ", Connection);
+
+                SqlCeDataReader dataReader = command.ExecuteReader();
 
 
                 dataReader.Read();
 
                 while (dataReader.Read())
-             {
-                    
-                listBox1.Items.Add(dataReader.GetString(0) + "  " + dataReader.GetString(1));
-             }
-             dataReader.Close();
+                {
+
+                    listBox1.Items.Add(dataReader.GetString(0) + "-" + dataReader.GetString(1));
+                }
+                dataReader.Close();
             }
 
             catch (Exception ee)
@@ -55,12 +55,6 @@ namespace Autobuska_stanica
 
 
             }
-
-
-
-
-
-
 
         }
 
@@ -77,24 +71,26 @@ namespace Autobuska_stanica
 
             DialogResult dr = MessageBox.Show("Da li želite da izbrišete ?", "Brisanje", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
+
+
+
             if (dr == DialogResult.Yes)
             {
+                string name = listBox1.SelectedItem.ToString().Substring(0, listBox1.SelectedItem.ToString().IndexOf('-'));
+
+                command.CommandText = "DELETE FROM workers WHERE first_name = '" + name + "';";
+
+                command.ExecuteNonQuery();
 
                 listBox1.Items.Remove(listBox1.SelectedItem);
-
-                command.CommandText = "DELETE FROM workers WHERE first_name = '" + listBox1.SelectedItem + "'  ";
-                command.ExecuteReader();
-
             }
-            else if (dr == DialogResult.No)
-            {
 
-                this.Close();
-                WorkersInformation CI = new WorkersInformation();
-                CI.Show();
-
-            }
+            else if (dr == DialogResult.No) { }
         }
     }
-    }
+
+
+
+        }
+   
 

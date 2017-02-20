@@ -86,6 +86,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ToTheCityInformation";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Information";
             this.Load += new System.EventHandler(this.ToTheCityInformation_Load);
             this.ResumeLayout(false);

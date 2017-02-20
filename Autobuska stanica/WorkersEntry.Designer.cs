@@ -182,6 +182,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "WorkersEntry";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add";
             this.Load += new System.EventHandler(this.WorkersEntry_Load);
             this.ResumeLayout(false);

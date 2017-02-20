@@ -66,24 +66,23 @@ namespace Autobuska_stanica
 
             DialogResult dr = MessageBox.Show("Da li želite da izbrišete ?", "Brisanje", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
+
             if (dr == DialogResult.Yes)
             {
+                string name = listBox1.SelectedItem.ToString().Substring(0, listBox1.SelectedItem.ToString().IndexOf('-'));
 
-                listBox1.Items.Remove(listBox1.SelectedItem);
+                command.CommandText = "DELETE FROM from_the_city WHERE name = '" + name + "';";
 
-                command.CommandText = "DELETE FROM from_the_city WHERE name = '" + listBox1.SelectedItem + "'  ";
                 command.ExecuteReader();
 
+                listBox1.Items.Remove(listBox1.SelectedItem);
             }
-            else if (dr == DialogResult.No)
-            {
 
-                this.Close();
-                FromTheCityInformation CI = new FromTheCityInformation();
-                CI.Show();
-
-            }
+            else if (dr == DialogResult.No) { }
         }
+   
+               
+            
 
         private void FromTheCityInformation_Load(object sender, EventArgs e)
         {
