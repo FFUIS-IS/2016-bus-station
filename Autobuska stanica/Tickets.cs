@@ -28,6 +28,9 @@ namespace Autobuska_stanica
             SqlCeConnection Connection = DbConnection.Instance.Connection;
 
             Boolean lineAllright = false;
+            bool workerAllright = false;
+
+            int broj;
 
             for (int i = 0; i < linesComboBox.Items.Count; i++)
                 if (linesComboBox.Text.Equals(linesComboBox.Items[i].ToString()))
@@ -37,7 +40,20 @@ namespace Autobuska_stanica
                 }
                 else
                     lineAllright = false;
-            if (!lineAllright)
+            for (int i = 0; i < workersComboBox.Items.Count; i++)
+                if (workersComboBox.Text.Equals(workersComboBox.Items[i].ToString()))
+                {
+                    workerAllright= true;
+                    break;
+                }
+                else
+                    workerAllright = false;
+
+            if(!workerAllright)
+            {
+
+            }
+            else if (!lineAllright)
             {
                 MessageBox.Show("Niste unijeli ispravnu rutu!");
                 linesComboBox.Focus();
@@ -51,16 +67,23 @@ namespace Autobuska_stanica
             {
                 MessageBox.Show("Niste unijeli grad dolaska!");
             }
-            else if (textBox4.Text == " ")
+            else if (seatText.Text == " " && !int.TryParse(seatText.Text, out broj))
             {
-                MessageBox.Show("Niste unijeli broj sjedista!");
+                MessageBox.Show("Niste ispravno unijeli broj sjedista!");
             }
-            else if (textBox3.Text == " ")
+            else if (platformText.Text == " " && !int.TryParse(platformText.Text, out broj))
             {
                 MessageBox.Show("Niste unijeli broj perona!");
             }
-           
 
+            else if (ticketText.Text == " " && !int.TryParse(ticketText.Text, out broj))
+            {
+                MessageBox.Show("Niste unijeli broj karata!");
+            }
+            else if(workersComboBox.Text == "")
+            {
+
+            }
             else
             {
                         SqlCeCommand command = Connection.CreateCommand();
@@ -69,33 +92,29 @@ namespace Autobuska_stanica
 
                         int indexOfLine = Int32.Parse(linesComboBox.SelectedItem.ToString().Substring(0, linesComboBox.SelectedItem.ToString().IndexOf(' ')));
 
-
-
+                string[] name = workersComboBox.SelectedItem.ToString().Split(' ');
                         command.CommandText = "SELECT ID FROM carrier WHERE name = '" + carrierComboBox.Text + "';";
-                        command1.CommandText = "SELECT ID FROM workers WHERE first_name  ='" + workersComboBox.Text + "'; ";
-                       // command2.CommandText = "SELECT ID FROM lines WHERE from_the_city_id = '" + linesComboBox.Text + "';";
-
+                        command1.CommandText = "SELECT ID FROM workers WHERE first_name  ='" + name[0] + "' AND last_name = '" + name[1] + "';";
 
 
                         SqlCeDataReader rdr = command.ExecuteReader();
                         rdr.Read();
-                        int d = rdr.GetInt32(0);
+                        int carrier = rdr.GetInt32(0);
 
 
-                       // SqlCeDataReader rdr1 = command1.ExecuteReader();
-                      //  rdr1.Read();
-                       // int j = rdr1.GetInt32(0);
-
-                        //SqlCeDataReader rdr2 = command2.ExecuteReader();
-                        //rdr2.Read();
-                        //int k = rdr2.GetInt32(0);
-
-
-                       // command.CommandText = "INSERT INTO tickets (carrier, workers_id, lines) VALUES (" + d + " , " + j + ", " + indexOfLine + " );";
+                        SqlCeDataReader rdr1 = command1.ExecuteReader();
+                      rdr1.Read();
+                       int workerID = rdr1.GetInt32(0);
+                
+                DateTime date = DateTime.Now;
+                command.CommandText = "INSERT INTO tickets (time, number_of_seats, platform, workers_id, price_listID, number_of_tickets, lineID) VALUES"
+            + "('" + toDate(date) + "', " + int.Parse(seatText.Text) + ", " + int.Parse(platformText.Text) + ", " + workerID 
+            + ", " + int.Parse(textBox5.Text) + ", " + int.Parse(ticketText.Text) + ", " 
+            + indexOfLine + ");";
 
                         try
                         {
-                            command.ExecuteNonQuery();
+                              command.ExecuteNonQuery();
                             MessageBox.Show("Unos je uspio!");
                             carrierComboBox.Focus();
                         }
@@ -107,7 +126,17 @@ namespace Autobuska_stanica
                     }
 
         }
+        string toDate(DateTime time)
+        {
+            string text = "" + time.Year + "-";
+            text += (time.Month < 10) ? ("0" + time.Month) : ("" + time.Month);
+            text += "-" + ((time.Day < 10) ? ("0" + time.Day) : ("" + time.Day));
+            text += " " + ((time.Hour < 10) ? ("0" + time.Hour) : ("" + time.Hour));
+            text += ":" + ((time.Minute< 10) ? ("0" + time.Minute) : ("" + time.Minute));
+            text += ":" + ((time.Second < 10) ? ("0" + time.Second) : ("" + time.Second));
 
+            return text;
+        }
         private void Tickets_Load(object sender, EventArgs e)
         {
             SqlCeConnection Connection = DbConnection.Instance.Connection;
@@ -217,9 +246,9 @@ namespace Autobuska_stanica
                 SqlCeDataReader reader = command.ExecuteReader();
                 int broj;
                 if (reader.Read())
-                    if (Int32.TryParse(textBox1.Text, out broj))
+                    if (Int32.TryParse(ticketText.Text, out broj))
                     {
-                        textBox5.Text = "" + (Int32.Parse(textBox1.Text) * reader.GetInt32(0));
+                        textBox5.Text = "" + (Int32.Parse(ticketText.Text) * reader.GetInt32(0));
                     }
             }
         }
@@ -237,8 +266,6 @@ namespace Autobuska_stanica
         private void nazadToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
-            Bus_station bs = new Bus_station();
-            bs.Show();
         }
     }
 }

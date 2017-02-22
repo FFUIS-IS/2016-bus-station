@@ -28,41 +28,12 @@ namespace Autobuska_stanica
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
-            {
-
-
-                
-                SqlCeConnection Connection = DbConnection.Instance.Connection;
-
-               
-                SqlCeCommand command = new SqlCeCommand("SELECT name FROM to_the_city;", Connection);
-
-                SqlCeDataReader dataReader = command.ExecuteReader();
-
-
-               
-
-                while (dataReader.Read())
-                {
-
-                    listBox1.Items.Add(dataReader.GetString(0) );
-                }
-                dataReader.Close();
-            }
-
-            catch (Exception ee)
-            {
-                MessageBox.Show(" Greska: " + ee.Message);
-                return;
-
-
-            }
+            refreshingCityList();
         }
         private void refreshingCityList()
         {
             listBox1.Items.Clear();
-            SqlCeCommand command = new SqlCeCommand("SELECT * FROM to_the_city ORDER BY Id", Connection);
+            SqlCeCommand command = new SqlCeCommand("SELECT * FROM to_the_city", Connection);
 
             try
             {
@@ -70,14 +41,7 @@ namespace Autobuska_stanica
 
                 while (dr.Read())
                 {
-
-                    ListViewItem item = new ListViewItem(dr["Id"].ToString());
-                    item.SubItems.Add(dr["name"].ToString());
-
-
-                    listBox1.Items.Add(item);
-
-
+                    listBox1.Items.Add(dr.GetString(1));
                 }
 
             }
@@ -89,7 +53,7 @@ namespace Autobuska_stanica
         }
         private void ToTheCityInformation_Load(object sender, EventArgs e)
         {
-
+            refreshingCityList();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -102,13 +66,19 @@ namespace Autobuska_stanica
 
             if (dr == DialogResult.Yes)
             {
-                listBox1.Items.Remove(listBox1.SelectedItem);
+                string name = listBox1.SelectedItem.ToString();
+                
 
-
-                command.CommandText = "DELETE FROM to_the_city WHERE name = '" + listBox1.SelectedItem + "'  ";
-                command.ExecuteReader();
-                refreshingCityList();
-
+                command.CommandText = "DELETE FROM to_the_city WHERE name = '" + listBox1.SelectedItem + "'; ";
+                try
+                {
+                    command.ExecuteReader();
+                    refreshingCityList();
+                }
+                catch(SqlCeException ee)
+                {
+                    MessageBox.Show(ee.ToString());
+                }
             }
             else if (dr == DialogResult.No)
             {

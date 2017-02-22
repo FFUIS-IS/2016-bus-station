@@ -29,15 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tickets));
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.carrierComboBox = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.ticketText = new System.Windows.Forms.TextBox();
+            this.seatText = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.linesComboBox = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -47,25 +46,13 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.workersComboBox = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.platformText = new System.Windows.Forms.TextBox();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.nazadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label1.Location = new System.Drawing.Point(314, 116);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 22);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Date and time :";
             // 
             // label2
             // 
@@ -135,21 +122,21 @@
             this.carrierComboBox.Size = new System.Drawing.Size(173, 21);
             this.carrierComboBox.TabIndex = 6;
             // 
-            // textBox1
+            // ticketText
             // 
-            this.textBox1.Location = new System.Drawing.Point(184, 149);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(56, 20);
-            this.textBox1.TabIndex = 7;
-            this.textBox1.Text = "0";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.ticketText.Location = new System.Drawing.Point(184, 149);
+            this.ticketText.Name = "ticketText";
+            this.ticketText.Size = new System.Drawing.Size(56, 20);
+            this.ticketText.TabIndex = 7;
+            this.ticketText.Text = "0";
+            this.ticketText.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox4
+            // seatText
             // 
-            this.textBox4.Location = new System.Drawing.Point(184, 182);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(56, 20);
-            this.textBox4.TabIndex = 10;
+            this.seatText.Location = new System.Drawing.Point(184, 182);
+            this.seatText.Name = "seatText";
+            this.seatText.Size = new System.Drawing.Size(56, 20);
+            this.seatText.TabIndex = 10;
             // 
             // label7
             // 
@@ -199,6 +186,7 @@
             // 
             // textBox5
             // 
+            this.textBox5.Enabled = false;
             this.textBox5.Location = new System.Drawing.Point(558, 215);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(80, 20);
@@ -253,20 +241,12 @@
             this.workersComboBox.Size = new System.Drawing.Size(195, 21);
             this.workersComboBox.TabIndex = 19;
             // 
-            // textBox3
+            // platformText
             // 
-            this.textBox3.Location = new System.Drawing.Point(184, 215);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(56, 20);
-            this.textBox3.TabIndex = 9;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.ButtonHighlight;
-            this.dateTimePicker1.Location = new System.Drawing.Point(455, 118);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 20;
+            this.platformText.Location = new System.Drawing.Point(184, 215);
+            this.platformText.Name = "platformText";
+            this.platformText.Size = new System.Drawing.Size(56, 20);
+            this.platformText.TabIndex = 9;
             // 
             // printDialog1
             // 
@@ -305,7 +285,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ClientSize = new System.Drawing.Size(662, 310);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.workersComboBox);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.button2);
@@ -315,16 +294,15 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.linesComboBox);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.seatText);
+            this.Controls.Add(this.platformText);
+            this.Controls.Add(this.ticketText);
             this.Controls.Add(this.carrierComboBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
@@ -340,16 +318,14 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox carrierComboBox;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox ticketText;
+        private System.Windows.Forms.TextBox seatText;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox linesComboBox;
         private System.Windows.Forms.Label label8;
@@ -359,8 +335,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox workersComboBox;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox platformText;
         private System.Windows.Forms.PrintDialog printDialog1;
         private System.Windows.Forms.ToolStripMenuItem nazadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem printToolStripMenuItem;

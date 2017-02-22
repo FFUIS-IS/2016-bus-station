@@ -35,12 +35,12 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.jmbgTextBox = new System.Windows.Forms.TextBox();
             this.contactTextBox = new System.Windows.Forms.TextBox();
             this.addressTextBox = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.jmbgTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -49,9 +49,9 @@
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(21, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 23);
+            this.label1.Size = new System.Drawing.Size(84, 23);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Name";
+            this.label1.Text = "First Name";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
@@ -93,7 +93,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 274);
+            this.button1.Location = new System.Drawing.Point(12, 300);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(106, 45);
             this.button1.TabIndex = 5;
@@ -103,7 +103,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(159, 274);
+            this.button2.Location = new System.Drawing.Point(145, 300);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(102, 45);
             this.button2.TabIndex = 6;
@@ -111,69 +111,69 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(21, 139);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(50, 23);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "JMBG";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(22, 163);
+            this.label5.Location = new System.Drawing.Point(21, 187);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 23);
+            this.label5.Size = new System.Drawing.Size(62, 23);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Contact ";
+            this.label5.Text = "Contact";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(24, 212);
+            this.label6.Location = new System.Drawing.Point(21, 234);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(62, 23);
             this.label6.TabIndex = 9;
             this.label6.Text = "Address";
             // 
+            // jmbgTextBox
+            // 
+            this.jmbgTextBox.Location = new System.Drawing.Point(125, 143);
+            this.jmbgTextBox.Name = "jmbgTextBox";
+            this.jmbgTextBox.Size = new System.Drawing.Size(100, 20);
+            this.jmbgTextBox.TabIndex = 10;
+            // 
             // contactTextBox
             // 
-            this.contactTextBox.Location = new System.Drawing.Point(125, 167);
+            this.contactTextBox.Location = new System.Drawing.Point(125, 191);
             this.contactTextBox.Name = "contactTextBox";
             this.contactTextBox.Size = new System.Drawing.Size(100, 20);
-            this.contactTextBox.TabIndex = 13;
+            this.contactTextBox.TabIndex = 11;
             // 
             // addressTextBox
             // 
-            this.addressTextBox.Location = new System.Drawing.Point(125, 215);
+            this.addressTextBox.Location = new System.Drawing.Point(125, 234);
             this.addressTextBox.Name = "addressTextBox";
             this.addressTextBox.Size = new System.Drawing.Size(100, 20);
-            this.addressTextBox.TabIndex = 14;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(21, 123);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 23);
-            this.label4.TabIndex = 17;
-            this.label4.Text = "JMBG";
-            // 
-            // jmbgTextBox
-            // 
-            this.jmbgTextBox.Location = new System.Drawing.Point(125, 127);
-            this.jmbgTextBox.Name = "jmbgTextBox";
-            this.jmbgTextBox.Size = new System.Drawing.Size(100, 20);
-            this.jmbgTextBox.TabIndex = 18;
+            this.addressTextBox.TabIndex = 12;
             // 
             // WorkersEntry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(308, 349);
-            this.Controls.Add(this.jmbgTextBox);
-            this.Controls.Add(this.label4);
+            this.ClientSize = new System.Drawing.Size(308, 357);
             this.Controls.Add(this.addressTextBox);
             this.Controls.Add(this.contactTextBox);
+            this.Controls.Add(this.jmbgTextBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);
@@ -199,11 +199,11 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox jmbgTextBox;
         private System.Windows.Forms.TextBox contactTextBox;
         private System.Windows.Forms.TextBox addressTextBox;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox jmbgTextBox;
     }
 }

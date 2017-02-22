@@ -46,58 +46,52 @@ namespace Autobuska_stanica
         private void button1_Click(object sender, EventArgs e)
         {
 
-            SqlCeConnection Connection = DbConnection.Instance.Connection;
-
-            SqlCeCommand command = new SqlCeCommand("INSERT INTO Workers ([first_name],[last_name],[jmbg],[contact],[address]) VALUES ('" + textBox1.Text + "', '" + textBox2.Text + "',"+jmbgTextBox.Text+" , "+contactTextBox.Text +", '"+ addressTextBox.Text+"' ); ", Connection);
-
-            try
-            {
-                command.ExecuteNonQuery();
-            }
-
-            catch (Exception ee)
-            {
-
-
-                MessageBox.Show("Unos nije uspio! \r Greska: " + ee.Message);
-                return;
-
-            }
-
 
             if (textBox1.Text == "")
             { MessageBox.Show("Niste unijeli ime!"); }
 
             else if (textBox2.Text == "")
             { MessageBox.Show("Niste unijeli prezime!"); }
-
             else if (jmbgTextBox.Text == "")
-            {
-                MessageBox.Show("Niste unijeli maticni broj!");
-
-            }
+            { MessageBox.Show("Niste unijeli jedinstven maticni broj!"); }
             else if (contactTextBox.Text == "")
-            {
-                MessageBox.Show("Niste unijeli broj telefona !", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+            { MessageBox.Show("Niste unijeli broj telefona!"); }
             else if (addressTextBox.Text == "")
-            {
-                MessageBox.Show("Niste unijeli adresu stanovanja !", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+            { MessageBox.Show("Niste unijeli adresu stanovanja!"); }
+
 
             else
             {
-                MessageBox.Show("Unos je uspio!");
-                textBox1.Clear();
-                textBox2.Clear();
-                jmbgTextBox.Clear();
-                contactTextBox.Clear();
-                addressTextBox.Clear();
-               
+            
 
-                textBox1.Focus();
+            SqlCeConnection Connection = DbConnection.Instance.Connection;
+
+            SqlCeCommand command = new SqlCeCommand("", Connection);
+            command.CommandText = "SELECT count(*) FROM workers;";
+            SqlCeDataReader reader = command.ExecuteReader();
+
+            reader.Read();
+            if (reader.GetInt32(0) < 5)
+            {
+                command.CommandText = "INSERT INTO Workers ([first_name],[last_name],[address],[jmbg],[contact]) VALUES('" + textBox1.Text + "', '" + textBox2.Text + "', '" + addressTextBox.Text + "', '" + jmbgTextBox.Text + "', '" + contactTextBox.Text + "'); ";
+                    try
+                    {
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("Unos je uspio!");
+                        textBox1.Clear();
+                        textBox2.Clear();
+                        jmbgTextBox.Clear();
+                        contactTextBox.Clear();
+                        addressTextBox.Clear();
+                        textBox1.Focus();
+                    }
+
+                    catch (Exception ee)
+                    {
+                        MessageBox.Show("Unos nije uspio! \n" + ee.Message);
+                        return;
+                    }
+                }
             }
         }
 

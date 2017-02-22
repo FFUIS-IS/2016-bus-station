@@ -25,26 +25,25 @@ namespace Autobuska_stanica
 
         private void button1_Click(object sender, EventArgs e)
         {
-
             try
             {
-
-
+                listBox1.Items.Clear();
                 SqlCeConnection Connection = DbConnection.Instance.Connection;
 
 
-                SqlCeCommand command = new SqlCeCommand("SELECT first_name, last_name FROM workers ", Connection);
+                SqlCeCommand command = new SqlCeCommand("SELECT first_name, last_name, address, jmbg, contact FROM workers", Connection);
 
                 SqlCeDataReader dataReader = command.ExecuteReader();
 
 
-                dataReader.Read();
+                //dataReader.Read();
 
                 while (dataReader.Read())
                 {
 
-                    listBox1.Items.Add(dataReader.GetString(0) + "-" + dataReader.GetString(1));
+                    listBox1.Items.Add(dataReader.GetString(0) + "-" + dataReader.GetString(1)+" "+ dataReader.GetString(2)+ " " +dataReader.GetString(3)+" "+ dataReader.GetString(4));
                 }
+
                 dataReader.Close();
             }
 
@@ -60,7 +59,7 @@ namespace Autobuska_stanica
 
         private void WorkersInformation_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void button2_Click(object sender, EventArgs e)
