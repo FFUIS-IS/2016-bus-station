@@ -22,42 +22,48 @@ namespace Autobuska_stanica
         private void button1_Click(object sender, EventArgs e)
         {
 
-            SqlCeConnection Connection = DbConnection.Instance.Connection;
+            if (textBox1.Text == "")
+            {
+                MessageBox.Show("Niste unijeli naziv prevoznika!");
+            }
 
-            SqlCeCommand command = new SqlCeCommand("INSERT INTO Carrier ([Name],[Address]) VALUES ('" + textBox1.Text + "', '" + textBox2.Text + "'); ", Connection);
+            else if (textBox2.Text == "")
+            {
+                MessageBox.Show("Niste unijeli adresu!");
+            }
 
-            try
+            else
             {
 
-                if (textBox1.Text == "")
-                { MessageBox.Show("Niste unijeli ime!"); }
+                SqlCeConnection Connection = DbConnection.Instance.Connection;
 
-                else if (textBox2.Text == "")
-                { MessageBox.Show("Niste unijeli adresu!"); }
+                SqlCeCommand command = new SqlCeCommand("INSERT INTO Carrier ([Name],[Address]) VALUES ('" + textBox1.Text + "', '" + textBox2.Text + "'); ", Connection);
 
-                else
+                try
                 {
+
+
                     command.ExecuteNonQuery();
                     MessageBox.Show("Unos je uspio!");
                     textBox1.Clear();
                     textBox2.Clear();
                     textBox1.Focus();
                 }
-               
+
+
+
+                catch (Exception ee)
+                {
+
+
+                    MessageBox.Show("Unos nije uspio! \r Greska: " + ee.Message);
+                    return;
+
+                }
+
+
             }
-
-            catch (Exception ee)
-            {
-
-
-                MessageBox.Show("Unos nije uspio! \r Greska: " + ee.Message);
-                return;
-
-            }
-
-
         }
-
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -66,6 +72,11 @@ namespace Autobuska_stanica
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void CarrierEntry_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

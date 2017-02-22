@@ -180,5 +180,22 @@ namespace Autobuska_stanica
             Form l = new LinesDelete();
             l.Show();
         }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Opacity = 0;
+            Form loginForm = new Login();
+            DialogResult result = loginForm.ShowDialog();
+            Opacity = 1;
+            if (result == DialogResult.Cancel)
+            {
+                this.Close();
+            }
+        }
+
+        private void label3_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

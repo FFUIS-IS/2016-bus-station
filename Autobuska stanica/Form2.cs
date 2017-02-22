@@ -20,6 +20,7 @@ namespace Autobuska_stanica
 
         private void button1_Click(object sender, EventArgs e)
         {
+            listBox1.Items.Clear();
          //   try
            // {
                 
@@ -49,6 +50,7 @@ namespace Autobuska_stanica
                 reserveReader.Read();
 
                 info += " - " + reserveReader.GetString(0);
+                info += "\tTime of travel: " + dataReader.GetString(2) + "-" + dataReader.GetString(3);
                 listBox1.Items.Add(info);
 
             }

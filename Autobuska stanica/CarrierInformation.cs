@@ -22,10 +22,13 @@ namespace Autobuska_stanica
         {
             try
             {
+                listBox1.Items.Clear();
+                listBox2.Items.Clear();
+
                 SqlCeConnection Connection = DbConnection.Instance.Connection;
 
 
-               SqlCeCommand command = new SqlCeCommand("SELECT Name, Address FROM Carrier ", Connection);
+                SqlCeCommand command = new SqlCeCommand("SELECT Name, Address FROM Carrier ", Connection);
 
                 SqlCeDataReader dataReader = command.ExecuteReader();
 
@@ -35,8 +38,10 @@ namespace Autobuska_stanica
                 while (dataReader.Read())
                 {
 
-                    listBox1.Items.Add(dataReader.GetString(0) + "-" + dataReader.GetString(1));
+                    listBox1.Items.Add(dataReader.GetString(0));
+                    listBox2.Items.Add(dataReader.GetString(1));
                 }
+
                 dataReader.Close();
             }
 
@@ -47,6 +52,7 @@ namespace Autobuska_stanica
 
 
             }
+
 
         }
 
@@ -59,21 +65,41 @@ namespace Autobuska_stanica
 
             DialogResult dr = MessageBox.Show("Da li želite da izbrišete ?", "Brisanje", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-                      if (dr == DialogResult.Yes)
-                    {
-                        string name = listBox1.SelectedItem.ToString().Substring(0, listBox1.SelectedItem.ToString().IndexOf('-'));
+            if (dr == DialogResult.Yes)
+            {
+                string name = listBox1.SelectedItem.ToString();
 
-                        command.CommandText = "DELETE FROM carrier WHERE name = '" + name + "';";
+                command.CommandText = "DELETE FROM carrier WHERE name = '" + name + "';";
 
-                        command.ExecuteReader();
+                command.ExecuteReader();
 
-                        listBox1.Items.Remove(listBox1.SelectedItem);
-                    }
-
-                    else if (dr == DialogResult.No) { }
-                }
+                listBox1.Items.Remove(listBox1.SelectedItem);
             }
+
+            else if (dr == DialogResult.No) { }
         }
-    
+
+        private void CarrierInformation_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            listBox1.SelectedIndex = listBox2.SelectedIndex;
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            listBox2.SelectedIndex = listBox1.SelectedIndex;
+        }
+    }
+}
+
+
+
+
+
 
 

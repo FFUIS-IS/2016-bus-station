@@ -118,6 +118,7 @@
             this.Name = "CarrierEntry";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add";
+            this.Load += new System.EventHandler(this.CarrierEntry_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
