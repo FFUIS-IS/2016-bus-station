@@ -37,9 +37,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(95, 256);
+            this.button1.Location = new System.Drawing.Point(110, 256);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 32);
+            this.button1.Size = new System.Drawing.Size(161, 32);
             this.button1.TabIndex = 0;
             this.button1.Text = "SHOW";
             this.button1.UseVisualStyleBackColor = true;
@@ -48,9 +48,9 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(52, 87);
+            this.listBox1.Location = new System.Drawing.Point(16, 87);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(398, 147);
+            this.listBox1.Size = new System.Drawing.Size(628, 147);
             this.listBox1.TabIndex = 1;
             // 
             // label1
@@ -65,9 +65,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(285, 256);
+            this.button2.Location = new System.Drawing.Point(351, 256);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(109, 32);
+            this.button2.Size = new System.Drawing.Size(155, 32);
             this.button2.TabIndex = 3;
             this.button2.Text = "DELETE";
             this.button2.UseVisualStyleBackColor = true;
@@ -77,7 +77,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(521, 300);
+            this.ClientSize = new System.Drawing.Size(668, 300);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBox1);

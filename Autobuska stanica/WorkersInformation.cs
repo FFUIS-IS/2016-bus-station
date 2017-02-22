@@ -41,7 +41,7 @@ namespace Autobuska_stanica
                 while (dataReader.Read())
                 {
 
-                    listBox1.Items.Add(dataReader.GetString(0) + "-" + dataReader.GetString(1)+" "+ dataReader.GetString(2)+ " " +dataReader.GetString(3)+" "+ dataReader.GetString(4));
+                    listBox1.Items.Add("Ime i prezime :\t"+dataReader.GetString(0) + " " + dataReader.GetString(1)+ "\t Adresa : " + dataReader.GetString(2)+ "\t JMBG :" +dataReader.GetString(3)+ "\t Broj telefona: " + dataReader.GetString(4));
                 }
 
                 dataReader.Close();

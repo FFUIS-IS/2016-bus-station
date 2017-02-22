@@ -82,7 +82,7 @@ namespace Autobuska_stanica
             }
             else if(workersComboBox.Text == "")
             {
-
+                MessageBox.Show("Niste unijeli radnika !");
             }
             else
             {

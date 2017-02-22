@@ -120,14 +120,14 @@
             this.carrierComboBox.Location = new System.Drawing.Point(85, 59);
             this.carrierComboBox.Name = "carrierComboBox";
             this.carrierComboBox.Size = new System.Drawing.Size(173, 21);
-            this.carrierComboBox.TabIndex = 6;
+            this.carrierComboBox.TabIndex = 1;
             // 
             // ticketText
             // 
             this.ticketText.Location = new System.Drawing.Point(184, 149);
             this.ticketText.Name = "ticketText";
             this.ticketText.Size = new System.Drawing.Size(56, 20);
-            this.ticketText.TabIndex = 7;
+            this.ticketText.TabIndex = 4;
             this.ticketText.Text = "0";
             this.ticketText.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -136,7 +136,7 @@
             this.seatText.Location = new System.Drawing.Point(184, 182);
             this.seatText.Name = "seatText";
             this.seatText.Size = new System.Drawing.Size(56, 20);
-            this.seatText.TabIndex = 10;
+            this.seatText.TabIndex = 5;
             // 
             // label7
             // 
@@ -158,7 +158,7 @@
             this.linesComboBox.Location = new System.Drawing.Point(85, 98);
             this.linesComboBox.Name = "linesComboBox";
             this.linesComboBox.Size = new System.Drawing.Size(173, 21);
-            this.linesComboBox.TabIndex = 12;
+            this.linesComboBox.TabIndex = 2;
             this.linesComboBox.SelectedIndexChanged += new System.EventHandler(this.linesComboBox_SelectedIndexChanged);
             // 
             // label8
@@ -190,7 +190,7 @@
             this.textBox5.Location = new System.Drawing.Point(558, 215);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(80, 20);
-            this.textBox5.TabIndex = 15;
+            this.textBox5.TabIndex = 7;
             this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // button1
@@ -201,7 +201,7 @@
             this.button1.Location = new System.Drawing.Point(16, 259);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(119, 39);
-            this.button1.TabIndex = 16;
+            this.button1.TabIndex = 8;
             this.button1.Text = "SAVE";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -214,7 +214,7 @@
             this.button2.Location = new System.Drawing.Point(161, 259);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(121, 39);
-            this.button2.TabIndex = 17;
+            this.button2.TabIndex = 9;
             this.button2.Text = "CANCEL";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -235,18 +235,19 @@
             this.workersComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.workersComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.workersComboBox.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.workersComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.workersComboBox.FormattingEnabled = true;
             this.workersComboBox.Location = new System.Drawing.Point(455, 77);
             this.workersComboBox.Name = "workersComboBox";
             this.workersComboBox.Size = new System.Drawing.Size(195, 21);
-            this.workersComboBox.TabIndex = 19;
+            this.workersComboBox.TabIndex = 3;
             // 
             // platformText
             // 
             this.platformText.Location = new System.Drawing.Point(184, 215);
             this.platformText.Name = "platformText";
             this.platformText.Size = new System.Drawing.Size(56, 20);
-            this.platformText.TabIndex = 9;
+            this.platformText.TabIndex = 6;
             // 
             // printDialog1
             // 

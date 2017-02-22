@@ -69,18 +69,30 @@ namespace Autobuska_stanica
             {
 
 
-                string name = comboBox1.SelectedItem.ToString().Substring(0, comboBox1.SelectedItem.ToString().IndexOf('-'));
+                string name = comboBox1.SelectedItem.ToString().Substring(0, comboBox1.SelectedItem.ToString().IndexOf(' '));
 
-                command.CommandText = "DELETE FROM lines WHERE from_the_city_id = '" + name + "';";
 
-                command.ExecuteReader();
+                command.CommandText = "DELETE FROM lines WHERE id = " + int.Parse(name) + ";";
+                try
+                {
+                    command.ExecuteReader();
 
-                comboBox1.Items.Remove(comboBox1.SelectedItem);
+                    comboBox1.Items.Remove(comboBox1.SelectedItem);
+                }
+                catch(SqlCeException ee)
+                {
+                    MessageBox.Show(ee.ToString());
+                }
             }
 
             else if (dr == DialogResult.No) { }
 
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
+    }
     }
 

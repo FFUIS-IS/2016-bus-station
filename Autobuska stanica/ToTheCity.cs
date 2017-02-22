@@ -20,37 +20,42 @@ namespace Autobuska_stanica
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlCeConnection Connection = DbConnection.Instance.Connection;
 
-            SqlCeCommand command = new SqlCeCommand("INSERT INTO to_the_city ([Name]) VALUES ('" + textBox1.Text + "'); ", Connection);
+            if (textBox1.Text == "")
+            { MessageBox.Show("Niste unijeli ime grada!"); }
 
-            try
+
+            else
             {
-                if (textBox1.Text == "")
-                { MessageBox.Show("Niste unijeli ime!"); }
 
 
-                else
+                SqlCeConnection Connection = DbConnection.Instance.Connection;
+
+                SqlCeCommand command = new SqlCeCommand("INSERT INTO to_the_city ([Name]) VALUES ('" + textBox1.Text + "'); ", Connection);
+
+                try
                 {
+
                     command.ExecuteNonQuery();
                     MessageBox.Show("Unos je uspio!");
                     textBox1.Clear();
                     textBox1.Focus();
+
+
                 }
-               
+
+                catch (Exception ee)
+                {
+
+
+                    MessageBox.Show("Unos nije uspio! \r Greska: " + ee.Message);
+                    return;
+
+                }
+
+
+
             }
-
-            catch (Exception ee)
-            {
-
-
-                MessageBox.Show("Unos nije uspio! \r Greska: " + ee.Message);
-                return;
-
-            }
-
-
-          
         }
 
         private void button2_Click(object sender, EventArgs e)

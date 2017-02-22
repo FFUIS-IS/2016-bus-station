@@ -39,8 +39,8 @@
             this.priceTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.timeOfArivalTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.timeOfDepartureTimePicker = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -65,6 +65,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(116, 30);
             this.comboBox1.Name = "comboBox1";
@@ -74,6 +75,7 @@
             // 
             // comboBox2
             // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(116, 82);
             this.comboBox2.Name = "comboBox2";
@@ -138,19 +140,22 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Time of arrival";
             // 
-            // textBox1
+            // timeOfArivalTimePicker
             // 
-            this.textBox1.Location = new System.Drawing.Point(459, 32);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 10;
+            this.timeOfArivalTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.timeOfArivalTimePicker.Location = new System.Drawing.Point(459, 81);
+            this.timeOfArivalTimePicker.Name = "timeOfArivalTimePicker";
+            this.timeOfArivalTimePicker.Size = new System.Drawing.Size(108, 20);
+            this.timeOfArivalTimePicker.TabIndex = 12;
+            this.timeOfArivalTimePicker.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
-            // textBox2
+            // timeOfDepartureTimePicker
             // 
-            this.textBox2.Location = new System.Drawing.Point(459, 81);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 11;
+            this.timeOfDepartureTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.timeOfDepartureTimePicker.Location = new System.Drawing.Point(459, 30);
+            this.timeOfDepartureTimePicker.Name = "timeOfDepartureTimePicker";
+            this.timeOfDepartureTimePicker.Size = new System.Drawing.Size(108, 20);
+            this.timeOfDepartureTimePicker.TabIndex = 13;
             // 
             // LinesEnetery
             // 
@@ -159,8 +164,8 @@
             this.BackgroundImage = global::Autobuska_stanica.Properties.Resources.download__5_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(571, 278);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.timeOfDepartureTimePicker);
+            this.Controls.Add(this.timeOfArivalTimePicker);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.priceTextBox);
@@ -193,7 +198,7 @@
         private System.Windows.Forms.TextBox priceTextBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.DateTimePicker timeOfArivalTimePicker;
+        private System.Windows.Forms.DateTimePicker timeOfDepartureTimePicker;
     }
 }
